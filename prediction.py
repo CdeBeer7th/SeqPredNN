@@ -29,7 +29,7 @@ def get_args():
     args = arg_parser.parse_args()
     return pathlib.Path(args.feature_dir), pathlib.Path(args.test_list), pathlib.Path(args.model_params), \
            pathlib.Path(args.out_dir), args.pred_only
-
+#test git
 
 class Predictor:
     def __init__(self, parameter_path, pred_only):
