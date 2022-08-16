@@ -209,7 +209,7 @@ def read_test_list(test_list):
 
 
 def main():
-    feat_dir, test_list, parameter_path, out_dir, pred_only = get_args()
+    feat_dir, test_list, parameter_path, out_dir, pred_only, nth_prediction = get_args()
 
     if not feat_dir.exists():
         raise FileNotFoundError(feat_dir)
