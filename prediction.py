@@ -21,6 +21,7 @@ def get_args():
     arg_parser.add_argument('feature_dir', type=str, help="directory of processed chain features")
     arg_parser.add_argument('test_list', type=str, help="path to list of protein chain code for sequence prediction")
     arg_parser.add_argument('model_params', type=str, help="file containing trained model parameters")
+    arg_parser.add_argument('nth_prediction', type=int, help="nth predicted residue for each position output")
     arg_parser.add_argument('-p', '--pred_only', action='store_true',
                             help="only predict sequences, without testing the model and comparing predictions with "
                                  "true sequences.")
@@ -28,15 +29,20 @@ def get_args():
                             help="output directory. Will create a new directory if OUT_DIR does not exist.")
     args = arg_parser.parse_args()
     return pathlib.Path(args.feature_dir), pathlib.Path(args.test_list), pathlib.Path(args.model_params), \
-           pathlib.Path(args.out_dir), args.pred_only
-#test git
+           pathlib.Path(args.out_dir), args.pred_only, args.nth_prediction
+
 
 class Predictor:
-    def __init__(self, parameter_path, pred_only):
+    def __init__(self, parameter_path, pred_only, nth_prediction):
         self.model = NeuralNetwork(input_nodes=180).to(device)
         parameters = torch.load(parameter_path)
         self.model.load_state_dict(parameters)
         self.pred_only = pred_only
+        # set variable to argument. If not exists set to highest probability
+        if not nth_prediction:
+            self.nth_prediction = 1
+        elif nth_prediction > 1:
+            self.nth_prediction = nth_prediction
 
     # set up dataloader for the structural features of the chain
     @staticmethod
@@ -68,7 +74,7 @@ class Predictor:
             softmax = nn.functional.softmax(output, dim=1)
             chain_softmax.extend(softmax.cpu().numpy())
             # the output node with the highest value is the predicted residue
-            top_residue = output.argmax(1)
+            top_residue = output.argmax(self.nth_prediction)
             pred_residues.append(int(top_residue))
         return pred_residues, chain_softmax, chain_loss, true_residues
 
