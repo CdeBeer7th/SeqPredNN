@@ -41,7 +41,7 @@ class Predictor:
         # set variable to argument. If not exists set to highest probability
         if not nth_prediction:
             self.nth_prediction = 1
-        elif nth_prediction > 1:
+        else:
             self.nth_prediction = nth_prediction
 
     # set up dataloader for the structural features of the chain
@@ -74,8 +74,13 @@ class Predictor:
             softmax = nn.functional.softmax(output, dim=1)
             chain_softmax.extend(softmax.cpu().numpy())
             # the output node with the highest value is the predicted residue
-            top_residue = output.argmax(self.nth_prediction)
-            pred_residues.append(int(top_residue))
+            #print(output)
+            top_residue = output.argmax(1)
+            nth_residue = torch.kthvalue(output, 21-self.nth_prediction)[1]
+            print(int(nth_residue))
+            print(int(top_residue))
+
+            pred_residues.append(int(nth_residue))
         return pred_residues, chain_softmax, chain_loss, true_residues
 
     # generate sequence string for the residue and add residues that were excluded during featurisation
@@ -111,12 +116,13 @@ class Predictor:
 
 
 class Evaluator:
-    def __init__(self, out_dir):
+    def __init__(self, out_dir, nth_prediction):
         self.out_dir = out_dir
         self.model_predictions = []
         self.model_true = []
         self.model_softmax = []
         self.model_loss = []
+        self.nth_prediction = nth_prediction
 
     @staticmethod
     def check_labels(true_residues):
@@ -158,7 +164,7 @@ class Evaluator:
             chain_report = metrics.classification_report(true_residues, pred_residues, target_names=list(classes),
                                                          labels=labels, digits=3, zero_division=0)
         # write files
-        with open(self.out_dir / chain / 'report.txt', 'w') as file:
+        with open(self.out_dir / chain / f"report.txt", 'w') as file:
             self.write_report(file, chain_report, avg_loss, unused_residues)
         with open(self.out_dir / chain / 'original_sequence.txt', 'w') as file:
             file.write(true_seq)
@@ -210,7 +216,7 @@ def read_test_list(test_list):
 
 def main():
     feat_dir, test_list, parameter_path, out_dir, pred_only, nth_prediction = get_args()
-
+    print(get_args())
     if not feat_dir.exists():
         raise FileNotFoundError(feat_dir)
     if not out_dir.exists():
@@ -218,8 +224,8 @@ def main():
 
     test_chains = read_test_list(test_list)
 
-    predict = Predictor(parameter_path, pred_only)
-    evaluate = Evaluator(out_dir)
+    predict = Predictor(parameter_path, pred_only, nth_prediction)
+    evaluate = Evaluator(out_dir, nth_prediction)
 
     n_chains = len(test_chains)
     i = 1
@@ -241,7 +247,7 @@ def main():
                 chain_dir = out_dir / chain
                 if not chain_dir.exists():
                     chain_dir.mkdir()
-                with open(chain_dir / 'prediction.txt', 'w') as file:
+                with open(chain_dir / f"prediction_top'{nth_prediction}'.txt", 'w') as file:
                     file.write(pred_seq)
 
                 if not pred_only:
