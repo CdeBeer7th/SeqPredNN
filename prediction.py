@@ -73,14 +73,19 @@ class Predictor:
                     true_residues.extend(label.cpu().numpy())
             softmax = nn.functional.softmax(output, dim=1)
             chain_softmax.extend(softmax.cpu().numpy())
-            # the output node with the highest value is the predicted residue
-            #print(output)
-            top_residue = output.argmax(1)
-            nth_residue = torch.kthvalue(output, 21-self.nth_prediction)[1]
-            print(int(nth_residue))
-            print(int(top_residue))
 
-            pred_residues.append(int(nth_residue))
+            # the output node with the highest value
+            top_residue = output.argmax(1)
+            print(int(top_residue))
+            print(float(torch.kthvalue(softmax, 20)[0]))
+            # if top node softmax probability is greater than threshold then choose that node
+            if float(torch.kthvalue(softmax, 20)[0]) > 0.6:
+                print(int(top_residue))
+                pred_residues.append(int(top_residue))
+            else:
+                nth_residue = torch.kthvalue(output, 21 - self.nth_prediction)[1]
+                print(int(nth_residue))
+                pred_residues.append(int(nth_residue))
         return pred_residues, chain_softmax, chain_loss, true_residues
 
     # generate sequence string for the residue and add residues that were excluded during featurisation
@@ -247,7 +252,7 @@ def main():
                 chain_dir = out_dir / chain
                 if not chain_dir.exists():
                     chain_dir.mkdir()
-                with open(chain_dir / f"prediction_top'{nth_prediction}'.txt", 'w') as file:
+                with open(chain_dir / f"threshold_prediction_top'{nth_prediction}'.txt", 'w') as file:
                     file.write(pred_seq)
 
                 if not pred_only:
