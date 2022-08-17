@@ -80,11 +80,11 @@ class Predictor:
             print(float(torch.kthvalue(softmax, 20)[0]))
             # if top node softmax probability is greater than threshold then choose that node
             if float(torch.kthvalue(softmax, 20)[0]) > 0.6:
-                print(int(top_residue))
+                print(f"top: {int(top_residue)}")
                 pred_residues.append(int(top_residue))
             else:
                 nth_residue = torch.kthvalue(output, 21 - self.nth_prediction)[1]
-                print(int(nth_residue))
+                print(f"nth: {int(nth_residue)}")
                 pred_residues.append(int(nth_residue))
         return pred_residues, chain_softmax, chain_loss, true_residues
 
