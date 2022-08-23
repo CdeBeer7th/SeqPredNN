@@ -54,13 +54,24 @@ class Predictor:
         return dataloader
 
     # predict the amino acid class of each residue in the chain
-    def sequence(self, feature_paths):
+    def sequence(self, feature_paths, feat_dir, chain):
+        sel_pos_path = feat_dir / ('config_' + chain + '.txt')
+        excluded_res_path = feat_dir / ('excluded_residues_' + chain + '.csv')
+        excluded_residue_positions = []
+        if excluded_res_path.exists():
+            with open(excluded_res_path, 'r') as file:
+                # excluded residues written in file as index,residue_name
+                for line in file:
+                    line = line.split(',')
+                    excluded_residue_positions.append(int(line[0]) + 1)
+        sel_positions = np.loadtxt(sel_pos_path, delimiter=',', unpack=True)
         dataloader = self.load_features(feature_paths)
         self.model.eval()
         chain_softmax = []
         pred_residues = []
         true_residues = []
         chain_loss = []
+        i = 1
         # load residue features one at a time
         for inputs, label in dataloader:
             with torch.no_grad():
@@ -74,13 +85,20 @@ class Predictor:
             softmax = nn.functional.softmax(output, dim=1)
             chain_softmax.extend(softmax.cpu().numpy())
             # the output node with the highest value is the predicted residue
-            #print(output)
+            # print(output)
             top_residue = output.argmax(1)
-            nth_residue = torch.kthvalue(output, 21-self.nth_prediction)[1]
-            print(int(nth_residue))
-            print(int(top_residue))
+            nth_residue = torch.kthvalue(output, 21 - self.nth_prediction)[1]
+            if i in excluded_residue_positions:
+                i += 1
+            # print(f"index: {i}")
+            # print(f"res: {int(nth_residue)}")
+            if i in sel_positions:
+                pred_residues.append(int(nth_residue))
+            else:
+                pred_residues.append(int(top_residue))
+            # print(f"{pred_residues}")
 
-            pred_residues.append(int(nth_residue))
+            i += 1
         return pred_residues, chain_softmax, chain_loss, true_residues
 
     # generate sequence string for the residue and add residues that were excluded during featurisation
