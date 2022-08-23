@@ -55,7 +55,6 @@ class Predictor:
 
     # predict the amino acid class of each residue in the chain
     def sequence(self, feature_paths, feat_dir, chain):
-        sel_pos_path = feat_dir / ('config_' + chain + '.txt')
         excluded_res_path = feat_dir / ('excluded_residues_' + chain + '.csv')
         excluded_residue_positions = []
         if excluded_res_path.exists():
@@ -64,7 +63,10 @@ class Predictor:
                 for line in file:
                     line = line.split(',')
                     excluded_residue_positions.append(int(line[0]) + 1)
-        sel_positions = np.loadtxt(sel_pos_path, delimiter=',', unpack=True)
+        sel_pos_path = feat_dir / ('config_' + chain + '.txt')
+        sel_positions = []
+        if sel_pos_path.exists():
+            sel_positions = np.loadtxt(sel_pos_path, delimiter=',', unpack=True)
         dataloader = self.load_features(feature_paths)
         self.model.eval()
         chain_softmax = []
@@ -90,14 +92,10 @@ class Predictor:
             nth_residue = torch.kthvalue(output, 21 - self.nth_prediction)[1]
             if i in excluded_residue_positions:
                 i += 1
-            # print(f"index: {i}")
-            # print(f"res: {int(nth_residue)}")
             if i in sel_positions:
                 pred_residues.append(int(nth_residue))
             else:
                 pred_residues.append(int(top_residue))
-            # print(f"{pred_residues}")
-
             i += 1
         return pred_residues, chain_softmax, chain_loss, true_residues
 
@@ -254,7 +252,7 @@ def main():
         if all([file.exists() for file in feature_paths]):
             try:
                 # run the model on each residue in the chain
-                pred_residues, chain_softmax, loss, true_residues = predict.sequence(feature_paths)
+                pred_residues, chain_softmax, loss, true_residues = predict.sequence(feature_paths, feat_dir, chain)
 
                 # convert true and predicted residue lists to strings, with X for non-standard residues
                 pred_seq, true_seq = predict.complete_seq(pred_residues, true_residues, chain, feat_dir)
