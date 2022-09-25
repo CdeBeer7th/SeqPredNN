@@ -53,7 +53,7 @@ class Predictor:
         dataloader = DataLoader(dataset, shuffle=False)
         return dataloader
 
-    # predict the amino acid class of each residue in the chain
+    # predict the amino acid class of each residue in the chain according to the config file and nth prediction
     def sequence(self, feature_paths, feat_dir, chain):
         excluded_res_path = feat_dir / ('excluded_residues_' + chain + '.csv')
         excluded_residue_positions = []
@@ -67,6 +67,7 @@ class Predictor:
         sel_positions = []
         if sel_pos_path.exists():
             sel_positions = np.loadtxt(sel_pos_path, delimiter=',', unpack=True)
+            print(sel_positions)
         dataloader = self.load_features(feature_paths)
         self.model.eval()
         chain_softmax = []
@@ -263,7 +264,7 @@ def main():
                 chain_dir = out_dir / chain
                 if not chain_dir.exists():
                     chain_dir.mkdir()
-                with open(chain_dir / f"prediction_top'{nth_prediction}'.txt", 'w') as file:
+                with open(chain_dir / f"prediction_config_top_{nth_prediction}.txt", 'w') as file:
                     file.write(pred_seq)
 
                 if not pred_only:
