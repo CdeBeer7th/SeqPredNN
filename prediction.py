@@ -66,7 +66,8 @@ class Predictor:
         sel_pos_path = feat_dir / ('config_' + chain + '.txt')
         sel_positions = []
         if sel_pos_path.exists():
-            sel_positions = np.loadtxt(sel_pos_path, delimiter=',', unpack=True)
+            with open(sel_pos_path, 'r') as file:
+                sel_positions = [int(line.strip('\n').split(' ')[2].split(':')[1]) for line in file]
             print(sel_positions)
         dataloader = self.load_features(feature_paths)
         self.model.eval()
