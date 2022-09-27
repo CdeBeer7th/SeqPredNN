@@ -65,9 +65,10 @@ class Predictor:
                     excluded_residue_positions.append(int(line[0]) + 1)
         sel_pos_path = feat_dir / ('config_' + chain + '.txt')
         sel_positions = []
+        # selected positions = index(from chimera) + 1
         if sel_pos_path.exists():
             with open(sel_pos_path, 'r') as file:
-                sel_positions = [int(line.strip('\n').split(' ')[2].split(':')[1]) for line in file]
+                sel_positions = [int(line.strip('\n').split(' ')[6])+1 for line in file]
             print(sel_positions)
         dataloader = self.load_features(feature_paths)
         self.model.eval()
@@ -99,7 +100,7 @@ class Predictor:
             else:
                 pred_residues.append(int(top_residue))
             i += 1
-        return pred_residues, chain_softmax, chain_loss, true_residues
+        return pred_residues, chain_softmax, chain_loss, true_residues, sel_positions
 
     # generate sequence string for the residue and add residues that were excluded during featurisation
     def complete_seq(self, pred_residues, true_residues, chain, feat_dir):
@@ -254,7 +255,7 @@ def main():
         if all([file.exists() for file in feature_paths]):
             try:
                 # run the model on each residue in the chain
-                pred_residues, chain_softmax, loss, true_residues = predict.sequence(feature_paths, feat_dir, chain)
+                pred_residues, chain_softmax, loss, true_residues, sel_positions = predict.sequence(feature_paths, feat_dir, chain)
 
                 # convert true and predicted residue lists to strings, with X for non-standard residues
                 pred_seq, true_seq = predict.complete_seq(pred_residues, true_residues, chain, feat_dir)
@@ -266,7 +267,7 @@ def main():
                 if not chain_dir.exists():
                     chain_dir.mkdir()
                 with open(chain_dir / f"prediction_config_top_{nth_prediction}.txt", 'w') as file:
-                    file.write(pred_seq)
+                    file.write(f'{chain} predicted:\n{pred_seq}\nSelected residue positions:\n{sel_positions}')
 
                 if not pred_only:
                     # generate a classification report and confusion matrices for the chain
