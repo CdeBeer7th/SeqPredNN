@@ -26,17 +26,28 @@ def get_args():
                                  "true sequences.")
     arg_parser.add_argument('-o', '--out_dir', type=str, default='./pred',
                             help="output directory. Will create a new directory if OUT_DIR does not exist.")
+    arg_parser.add_argument('-n', '--nth_prediction', type=int, default=1,
+                            help="nth predicted residue for each position output")
+    arg_parser.add_argument('-t', '--threshold', type=float, default=1,
+                            help="softmax threshold limit in range (0,1]")
+
+    arg_parser.add_argument('-c', '--config', action='store_true',
+                            help="use config file in feature directory named according to convention: config_chain.txt."
+                                 "If omitted, all positions are used for all chains.")
     args = arg_parser.parse_args()
     return pathlib.Path(args.feature_dir), pathlib.Path(args.test_list), pathlib.Path(args.model_params), \
-           pathlib.Path(args.out_dir), args.pred_only
+           pathlib.Path(args.out_dir), args.pred_only, args.nth_prediction, args.threshold, args.config
 
 
 class Predictor:
-    def __init__(self, parameter_path, pred_only):
+    def __init__(self, parameter_path, pred_only, nth_prediction, threshold, config):
         self.model = NeuralNetwork(input_nodes=180).to(device)
         parameters = torch.load(parameter_path)
         self.model.load_state_dict(parameters)
         self.pred_only = pred_only
+        self.nth_prediction = nth_prediction
+        self.threshold = threshold
+        self.config = config
 
     # set up dataloader for the structural features of the chain
     @staticmethod
@@ -47,14 +58,30 @@ class Predictor:
         dataloader = DataLoader(dataset, shuffle=False)
         return dataloader
 
-    # predict the amino acid class of each residue in the chain
-    def sequence(self, feature_paths):
+    # predict the amino acid class of each residue in the chain according to the config file and nth prediction
+    def sequence(self, feature_paths, feat_dir, chain):
+        excluded_res_path = feat_dir / ('excluded_residues_' + chain + '.csv')
+        excluded_residue_positions = []
+        if excluded_res_path.exists():
+            with open(excluded_res_path, 'r') as file:
+                # excluded residues written in file as index,residue_name
+                for line in file:
+                    line = line.split(',')
+                    excluded_residue_positions.append(int(line[0]) + 1)
+        sel_pos_path = feat_dir / ('config_' + chain + '.txt')
+        sel_positions = []
+        # selected positions = index(from chimera) + 1
+        if sel_pos_path.exists() and self.config:
+            with open(sel_pos_path, 'r') as file:
+                sel_positions = [int(line.strip('\n')[0]) for line in file]
+            print(sel_positions)
         dataloader = self.load_features(feature_paths)
         self.model.eval()
         chain_softmax = []
         pred_residues = []
         true_residues = []
         chain_loss = []
+        i = 1
         # load residue features one at a time
         for inputs, label in dataloader:
             with torch.no_grad():
@@ -68,9 +95,17 @@ class Predictor:
             softmax = nn.functional.softmax(output, dim=1)
             chain_softmax.extend(softmax.cpu().numpy())
             # the output node with the highest value is the predicted residue
+            # print(output)
             top_residue = output.argmax(1)
-            pred_residues.append(int(top_residue))
-        return pred_residues, chain_softmax, chain_loss, true_residues
+            nth_residue = torch.kthvalue(output, 21 - self.nth_prediction)[1]
+            if i in excluded_residue_positions:
+                i += 1
+            if float(torch.kthvalue(softmax, 20)[0]) > self.threshold and i not in sel_positions:
+                pred_residues.append(int(top_residue))
+            else:
+                pred_residues.append(int(nth_residue))
+            i += 1
+        return pred_residues, chain_softmax, chain_loss, true_residues, sel_positions
 
     # generate sequence string for the residue and add residues that were excluded during featurisation
     def complete_seq(self, pred_residues, true_residues, chain, feat_dir):
@@ -152,7 +187,7 @@ class Evaluator:
             chain_report = metrics.classification_report(true_residues, pred_residues, target_names=list(classes),
                                                          labels=labels, digits=3, zero_division=0)
         # write files
-        with open(self.out_dir / chain / 'report.txt', 'w') as file:
+        with open(self.out_dir / chain / f"report.txt", 'w') as file:
             self.write_report(file, chain_report, avg_loss, unused_residues)
         with open(self.out_dir / chain / 'original_sequence.txt', 'w') as file:
             file.write(true_seq)
@@ -203,8 +238,8 @@ def read_test_list(test_list):
 
 
 def main():
-    feat_dir, test_list, parameter_path, out_dir, pred_only = get_args()
-
+    feat_dir, test_list, parameter_path, out_dir, pred_only, nth_prediction, threshold, config = get_args()
+    print(get_args())
     if not feat_dir.exists():
         raise FileNotFoundError(feat_dir)
     if not out_dir.exists():
@@ -212,7 +247,7 @@ def main():
 
     test_chains = read_test_list(test_list)
 
-    predict = Predictor(parameter_path, pred_only)
+    predict = Predictor(parameter_path, pred_only, nth_prediction, threshold, config)
     evaluate = Evaluator(out_dir)
 
     n_chains = len(test_chains)
@@ -224,7 +259,7 @@ def main():
         if all([file.exists() for file in feature_paths]):
             try:
                 # run the model on each residue in the chain
-                pred_residues, chain_softmax, loss, true_residues = predict.sequence(feature_paths)
+                pred_residues, chain_softmax, loss, true_residues, sel_positions = predict.sequence(feature_paths, feat_dir, chain)
 
                 # convert true and predicted residue lists to strings, with X for non-standard residues
                 pred_seq, true_seq = predict.complete_seq(pred_residues, true_residues, chain, feat_dir)
@@ -232,11 +267,29 @@ def main():
                 if not pred_only:
                     print(chain, '- Original sequence:\n' + true_seq + '\n')
 
+                if config and len(sel_positions)!=0:
+                    spec = 'config'
+                else:
+                    spec = ''
+
                 chain_dir = out_dir / chain
                 if not chain_dir.exists():
                     chain_dir.mkdir()
-                with open(chain_dir / 'prediction.txt', 'w') as file:
-                    file.write(pred_seq)
+                if threshold == 1:
+                    with open(chain_dir / f"top_{nth_prediction}_prediction_{spec}.txt",
+                              'w') as file:
+                        if config:
+                            file.write(f'{chain} predicted:\n{pred_seq}\nSelected residue positions:\n{sel_positions}')
+                        else:
+                            file.write(f'{chain} predicted:\n{pred_seq}')
+                else:
+                    with open(chain_dir / f"top_{nth_prediction}_{int(threshold*100)}%_threshold_prediction_{spec}.txt", 'w')\
+                            as file:
+                        if config:
+                            file.write(f'{chain} predicted:\n{pred_seq}\nSelected residue positions:\n{sel_positions}')
+                        else:
+                            file.write(f'{chain} predicted:\n{pred_seq}')
+
 
                 if not pred_only:
                     # generate a classification report and confusion matrices for the chain
