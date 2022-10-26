@@ -30,7 +30,6 @@ def get_args():
                             help="nth predicted residue for each position output")
     arg_parser.add_argument('-t', '--threshold', type=float, default=1,
                             help="softmax threshold limit in range (0,1]")
-
     arg_parser.add_argument('-c', '--config', action='store_true',
                             help="use config file in feature directory named according to convention: config_chain.txt."
                                  "If omitted, all positions are used for all chains.")
@@ -100,10 +99,18 @@ class Predictor:
             nth_residue = torch.kthvalue(output, 21 - self.nth_prediction)[1]
             if i in excluded_residue_positions:
                 i += 1
-            if float(torch.kthvalue(softmax, 20)[0]) > self.threshold and i not in sel_positions:
-                pred_residues.append(int(top_residue))
+            if self.config:
+                if i in sel_positions and float(torch.kthvalue(softmax, 20)[0]) > self.threshold:
+                    pred_residues.append(int(top_residue))
+                elif i in sel_positions:
+                    pred_residues.append(int(nth_residue))
+                else:
+                    pred_residues.append(int(top_residue))
             else:
-                pred_residues.append(int(nth_residue))
+                if float(torch.kthvalue(softmax, 20)[0]) > self.threshold:
+                    pred_residues.append(int(top_residue))
+                else:
+                    pred_residues.append(int(nth_residue))
             i += 1
         return pred_residues, chain_softmax, chain_loss, true_residues, sel_positions
 
