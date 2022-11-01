@@ -1,0 +1,209 @@
+REM  --------------------------------------------------------------------  1SHR
+REM                                                                        1SHR
+REM  STRIDE: Knowledge-based secondary structure assignment                1SHR
+REM  Please cite: D.Frishman & P.Argos, Proteins XX, XXX-XXX, 1995         1SHR
+REM                                                                        1SHR
+REM  Residue accessible surface area calculation                           1SHR
+REM  Please cite: F.Eisenhaber & P.Argos, J.Comp.Chem. 14, 1272-1280, 1993 1SHR
+REM               F.Eisenhaber et al., J.Comp.Chem., 1994, submitted       1SHR
+REM                                                                        1SHR
+REM  ------------------------ General information -----------------------  1SHR
+REM                                                                        1SHR
+HDR  OXYGEN STORAGE/TRANSPORT                26-FEB-04   1SHR              1SHR
+CMP  MOL_ID: 1;                                                            1SHR
+CMP   MOLECULE: HEMOGLOBIN ALPHA CHAIN;                                    1SHR
+CMP   CHAIN: A, C;                                                         1SHR
+CMP   MOL_ID: 2;                                                           1SHR
+CMP   MOLECULE: HEMOGLOBIN DELTA CHAIN;                                    1SHR
+CMP   CHAIN: B, D                                                          1SHR
+SRC  MOL_ID: 1;                                                            1SHR
+SRC   ORGANISM_SCIENTIFIC: HOMO SAPIENS;                                   1SHR
+SRC   ORGANISM_COMMON: HUMAN;                                              1SHR
+SRC   ORGANISM_TAXID: 9606;                                                1SHR
+SRC   TISSUE: BETA-THALASSEMIC MINOR BLOOD;                                1SHR
+SRC   MOL_ID: 2;                                                           1SHR
+SRC   ORGANISM_SCIENTIFIC: HOMO SAPIENS;                                   1SHR
+SRC   ORGANISM_COMMON: HUMAN;                                              1SHR
+SRC   ORGANISM_TAXID: 9606;                                                1SHR
+SRC   TISSUE: BETA-THALASSEMIC MINOR BLOOD                                 1SHR
+AUT  U.SEN,J.DASGUPTA,D.CHOUDHURY,P.DATTA,A.CHAKRABARTI,                   1SHR
+AUT   S.B.CHAKRABARTY,A.CHAKRABARTY,J.K.DATTAGUPTA                         1SHR
+REM                                                                        1SHR
+REM  -------------------- Secondary structure summary -------------------  1SHR
+REM                                                                        1SHR
+CHN  ./pdb1shr.pdb A                                                       1SHR
+REM                                                                        1SHR
+REM                .         .         .         .         .               1SHR
+SEQ  1    VLSPADKTNVKAAWGKVGAHAGEYGAEALERMFLSFPTTKTYFPHFDLSH   50          1SHR
+STR          HHHHHHHHHHHHHHGGGHHHHHHHHHHHHHHH GGGGGGTTTT  TT               1SHR
+REM                                                                        1SHR
+REM                .         .         .         .         .               1SHR
+SEQ  51   GSAQVKGHGKKVADALTNAVAHVDDMPNALSALSDLHAHKLRVDPVNFKL  100          1SHR
+STR       TTHHHHHHHHHHHHHHHHHHHHTTTHHHHHHHHHHHHHHH    HHHHHH               1SHR
+REM                                                                        1SHR
+REM                .         .         .         .                         1SHR
+SEQ  101  LSHCLLVTLAAHLPAEFTPAVHASLDKFLASVSTVLTSKYR           141          1SHR
+STR       HHHHHHHHHHHHTTTTTTHHHHHHHHHHHHHHHHHHH                            1SHR
+REM                                                                        1SHR
+REM                                                                        1SHR
+REM                                                                        1SHR
+LOC  AlphaHelix   PRO     4 A      VAL     17 A                            1SHR
+LOC  AlphaHelix   ALA    21 A      SER     35 A                            1SHR
+LOC  AlphaHelix   ALA    53 A      HIS     72 A                            1SHR
+LOC  AlphaHelix   MET    76 A      LYS     90 A                            1SHR
+LOC  AlphaHelix   PRO    95 A      HIS    112 A                            1SHR
+LOC  AlphaHelix   PRO   119 A      THR    137 A                            1SHR
+LOC  310Helix     GLY    18 A      HIS     20 A                            1SHR
+LOC  310Helix     PRO    37 A      TYR     42 A                            1SHR
+LOC  TurnI        PHE    43 A      PHE     46 A                            1SHR
+LOC  TurnII       SER    49 A      SER     52 A                            1SHR
+LOC  TurnI        HIS    72 A      ASP     75 A                            1SHR
+LOC  TurnIV       VAL    73 A      MET     76 A                            1SHR
+LOC  TurnI        LEU   113 A      GLU    116 A                            1SHR
+LOC  TurnI        PRO   114 A      PHE    117 A                            1SHR
+LOC  TurnIV       ALA   115 A      THR    118 A                            1SHR
+REM                                                                        1SHR
+REM  --------------- Detailed secondary structure assignment-------------  1SHR
+REM                                                                        1SHR
+REM  |---Residue---|    |--Structure--|   |-Phi-|   |-Psi-|  |-Area-|      1SHR
+ASG  VAL A    1    1    C          Coil    360.00    122.49     161.4      1SHR
+ASG  LEU A    2    2    C          Coil    -83.70    134.75      19.1      1SHR
+ASG  SER A    3    3    C          Coil    -84.82    167.53      44.6      1SHR
+ASG  PRO A    4    4    H    AlphaHelix    -57.65    -40.28     105.5      1SHR
+ASG  ALA A    5    5    H    AlphaHelix    -64.02    -38.58      56.3      1SHR
+ASG  ASP A    6    6    H    AlphaHelix    -59.47    -44.88      15.2      1SHR
+ASG  LYS A    7    7    H    AlphaHelix    -62.25    -43.65      56.7      1SHR
+ASG  THR A    8    8    H    AlphaHelix    -64.26    -43.37      93.3      1SHR
+ASG  ASN A    9    9    H    AlphaHelix    -61.73    -44.06      45.3      1SHR
+ASG  VAL A   10   10    H    AlphaHelix    -65.43    -44.85       1.0      1SHR
+ASG  LYS A   11   11    H    AlphaHelix    -65.41    -41.44      94.4      1SHR
+ASG  ALA A   12   12    H    AlphaHelix    -65.30    -48.56      48.3      1SHR
+ASG  ALA A   13   13    H    AlphaHelix    -63.14    -45.60      10.2      1SHR
+ASG  TRP A   14   14    H    AlphaHelix    -68.36    -27.58      18.8      1SHR
+ASG  GLY A   15   15    H    AlphaHelix    -68.53    -36.86      54.3      1SHR
+ASG  LYS A   16   16    H    AlphaHelix    -65.57    -40.62     124.5      1SHR
+ASG  VAL A   17   17    H    AlphaHelix    -58.43    -38.79       3.2      1SHR
+ASG  GLY A   18   18    G      310Helix     46.50   -131.53      38.6      1SHR
+ASG  ALA A   19   19    G      310Helix    -71.11     -0.55     102.8      1SHR
+ASG  HIS A   20   20    G      310Helix    -92.03      0.27     102.7      1SHR
+ASG  ALA A   21   21    H    AlphaHelix    -53.20    -49.44       4.3      1SHR
+ASG  GLY A   22   22    H    AlphaHelix    -54.18    -46.24      10.7      1SHR
+ASG  GLU A   23   23    H    AlphaHelix    -61.83    -44.20     103.6      1SHR
+ASG  TYR A   24   24    H    AlphaHelix    -65.47    -34.23      12.0      1SHR
+ASG  GLY A   25   25    H    AlphaHelix    -64.93    -42.75       7.0      1SHR
+ASG  ALA A   26   26    H    AlphaHelix    -64.41    -44.60      15.1      1SHR
+ASG  GLU A   27   27    H    AlphaHelix    -63.93    -39.81      31.3      1SHR
+ASG  ALA A   28   28    H    AlphaHelix    -57.79    -47.78       2.0      1SHR
+ASG  LEU A   29   29    H    AlphaHelix    -61.50    -46.08       3.4      1SHR
+ASG  GLU A   30   30    H    AlphaHelix    -58.46    -46.00      65.6      1SHR
+ASG  ARG A   31   31    H    AlphaHelix    -64.81    -36.95      91.8      1SHR
+ASG  MET A   32   32    H    AlphaHelix    -67.59    -48.00      10.0      1SHR
+ASG  PHE A   33   33    H    AlphaHelix    -60.60    -32.18      11.8      1SHR
+ASG  LEU A   34   34    H    AlphaHelix    -82.08    -43.67     144.2      1SHR
+ASG  SER A   35   35    H    AlphaHelix    -76.51    -33.16      79.4      1SHR
+ASG  PHE A   36   36    C          Coil   -129.53     71.37      61.9      1SHR
+ASG  PRO A   37   37    G      310Helix    -44.38    -30.83      69.3      1SHR
+ASG  THR A   38   38    G      310Helix    -62.86    -25.16      98.7      1SHR
+ASG  THR A   39   39    G      310Helix    -65.53    -20.74       1.9      1SHR
+ASG  LYS A   40   40    G      310Helix    -66.22    -23.09      95.5      1SHR
+ASG  THR A   41   41    G      310Helix    -65.14    -11.84     101.0      1SHR
+ASG  TYR A   42   42    G      310Helix    -85.78    -13.26      76.0      1SHR
+ASG  PHE A   43   43    T          Turn   -126.38     57.11      40.0      1SHR
+ASG  PRO A   44   44    T          Turn    -55.75    -35.25      94.3      1SHR
+ASG  HIS A   45   45    T          Turn    -98.88      9.76     177.7      1SHR
+ASG  PHE A   46   46    T          Turn    -90.61    154.57      60.2      1SHR
+ASG  ASP A   47   47    C          Coil    -92.12    105.72      84.5      1SHR
+ASG  LEU A   48   48    C          Coil    -98.18     10.91      41.3      1SHR
+ASG  SER A   49   49    T          Turn    -58.07    147.90      64.7      1SHR
+ASG  HIS A   50   50    T          Turn    -56.13    124.43     152.3      1SHR
+ASG  GLY A   51   51    T          Turn     87.70      6.57      60.4      1SHR
+ASG  SER A   52   52    T          Turn    -54.82    136.24       6.6      1SHR
+ASG  ALA A   53   53    H    AlphaHelix    -67.07    -33.27      81.8      1SHR
+ASG  GLN A   54   54    H    AlphaHelix    -65.39    -40.16      82.5      1SHR
+ASG  VAL A   55   55    H    AlphaHelix    -70.02    -40.19       9.8      1SHR
+ASG  LYS A   56   56    H    AlphaHelix    -60.59    -46.84     152.3      1SHR
+ASG  GLY A   57   57    H    AlphaHelix    -66.82    -39.76      38.9      1SHR
+ASG  HIS A   58   58    H    AlphaHelix    -65.63    -35.21      57.2      1SHR
+ASG  GLY A   59   59    H    AlphaHelix    -64.80    -31.95       0.0      1SHR
+ASG  LYS A   60   60    H    AlphaHelix    -69.11    -38.99      97.8      1SHR
+ASG  LYS A   61   61    H    AlphaHelix    -67.32    -37.19     155.7      1SHR
+ASG  VAL A   62   62    H    AlphaHelix    -64.88    -44.41      39.8      1SHR
+ASG  ALA A   63   63    H    AlphaHelix    -61.51    -44.58       1.2      1SHR
+ASG  ASP A   64   64    H    AlphaHelix    -60.60    -35.05      74.8      1SHR
+ASG  ALA A   65   65    H    AlphaHelix    -67.81    -38.59      25.6      1SHR
+ASG  LEU A   66   66    H    AlphaHelix    -66.85    -39.30      17.4      1SHR
+ASG  THR A   67   67    H    AlphaHelix    -61.80    -39.58      60.0      1SHR
+ASG  ASN A   68   68    H    AlphaHelix    -66.49    -39.72      64.0      1SHR
+ASG  ALA A   69   69    H    AlphaHelix    -64.93    -38.21       0.2      1SHR
+ASG  VAL A   70   70    H    AlphaHelix    -63.64    -44.15      12.2      1SHR
+ASG  ALA A   71   71    H    AlphaHelix    -65.20    -24.72      63.9      1SHR
+ASG  HIS A   72   72    H    AlphaHelix   -123.19     38.32      81.7      1SHR
+ASG  VAL A   73   73    T          Turn    -54.12    -20.41      12.4      1SHR
+ASG  ASP A   74   74    T          Turn    -96.57     -0.60     119.9      1SHR
+ASG  ASP A   75   75    T          Turn   -151.50     50.64      79.6      1SHR
+ASG  MET A   76   76    H    AlphaHelix    -65.14    -41.04      11.9      1SHR
+ASG  PRO A   77   77    H    AlphaHelix    -54.75    -43.41      60.5      1SHR
+ASG  ASN A   78   78    H    AlphaHelix    -67.29    -47.11     112.1      1SHR
+ASG  ALA A   79   79    H    AlphaHelix    -67.37    -29.81      29.7      1SHR
+ASG  LEU A   80   80    H    AlphaHelix   -106.76     14.53       3.7      1SHR
+ASG  SER A   81   81    H    AlphaHelix    -52.96    -36.64      65.7      1SHR
+ASG  ALA A   82   82    H    AlphaHelix    -67.22    -31.98      69.9      1SHR
+ASG  LEU A   83   83    H    AlphaHelix    -78.61    -26.28      46.7      1SHR
+ASG  SER A   84   84    H    AlphaHelix    -70.25    -43.64       2.6      1SHR
+ASG  ASP A   85   85    H    AlphaHelix    -53.75    -49.54      38.7      1SHR
+ASG  LEU A   86   86    H    AlphaHelix    -66.34    -50.99      71.0      1SHR
+ASG  HIS A   87   87    H    AlphaHelix    -80.51    -34.49      43.6      1SHR
+ASG  ALA A   88   88    H    AlphaHelix    -95.26    -48.59      11.5      1SHR
+ASG  HIS A   89   89    H    AlphaHelix    -75.32    -47.53      44.8      1SHR
+ASG  LYS A   90   90    H    AlphaHelix    -90.82    -57.49     136.3      1SHR
+ASG  LEU A   91   91    C          Coil    -78.07    -22.49      82.8      1SHR
+ASG  ARG A   92   92    C          Coil     50.50     49.14     205.2      1SHR
+ASG  VAL A   93   93    C          Coil    -70.79    132.45      19.9      1SHR
+ASG  ASP A   94   94    C          Coil    -68.28    126.93      84.4      1SHR
+ASG  PRO A   95   95    H    AlphaHelix    -49.91    -29.50      69.4      1SHR
+ASG  VAL A   96   96    H    AlphaHelix    -56.30    -36.86      66.1      1SHR
+ASG  ASN A   97   97    H    AlphaHelix    -63.48    -27.96      19.2      1SHR
+ASG  PHE A   98   98    H    AlphaHelix    -71.61    -30.83      22.9      1SHR
+ASG  LYS A   99   99    H    AlphaHelix    -68.92    -35.80     151.2      1SHR
+ASG  LEU A  100  100    H    AlphaHelix    -67.71    -47.62      32.5      1SHR
+ASG  LEU A  101  101    H    AlphaHelix    -66.69    -41.90      42.9      1SHR
+ASG  SER A  102  102    H    AlphaHelix    -59.31    -44.94      14.5      1SHR
+ASG  HIS A  103  103    H    AlphaHelix    -59.00    -46.97      98.4      1SHR
+ASG  CYS A  104  104    H    AlphaHelix    -65.13    -28.48       4.2      1SHR
+ASG  LEU A  105  105    H    AlphaHelix    -73.44    -39.04      11.0      1SHR
+ASG  LEU A  106  106    H    AlphaHelix    -65.61    -36.10       9.6      1SHR
+ASG  VAL A  107  107    H    AlphaHelix    -66.85    -43.31      49.9      1SHR
+ASG  THR A  108  108    H    AlphaHelix    -59.98    -45.46       0.0      1SHR
+ASG  LEU A  109  109    H    AlphaHelix    -64.03    -42.79       5.4      1SHR
+ASG  ALA A  110  110    H    AlphaHelix    -60.78    -42.20      36.4      1SHR
+ASG  ALA A  111  111    H    AlphaHelix    -65.86    -38.97      61.0      1SHR
+ASG  HIS A  112  112    H    AlphaHelix    -87.55    -35.66      65.2      1SHR
+ASG  LEU A  113  113    T          Turn   -122.20     64.98      28.5      1SHR
+ASG  PRO A  114  114    T          Turn    -47.85    -53.09      96.3      1SHR
+ASG  ALA A  115  115    T          Turn    -65.63    -39.89      79.5      1SHR
+ASG  GLU A  116  116    T          Turn    -78.10    -26.29      68.3      1SHR
+ASG  PHE A  117  117    T          Turn    -81.01     65.67      34.8      1SHR
+ASG  THR A  118  118    T          Turn    -77.45    166.67      57.7      1SHR
+ASG  PRO A  119  119    H    AlphaHelix    -57.64    -39.71     114.0      1SHR
+ASG  ALA A  120  120    H    AlphaHelix    -63.33    -43.48      53.5      1SHR
+ASG  VAL A  121  121    H    AlphaHelix    -68.30    -41.82      18.8      1SHR
+ASG  HIS A  122  122    H    AlphaHelix    -56.95    -48.26      82.6      1SHR
+ASG  ALA A  123  123    H    AlphaHelix    -61.45    -49.38      52.6      1SHR
+ASG  SER A  124  124    H    AlphaHelix    -64.63    -40.84       2.0      1SHR
+ASG  LEU A  125  125    H    AlphaHelix    -65.81    -39.78       5.2      1SHR
+ASG  ASP A  126  126    H    AlphaHelix    -59.71    -43.66      79.8      1SHR
+ASG  LYS A  127  127    H    AlphaHelix    -66.52    -43.47      77.4      1SHR
+ASG  PHE A  128  128    H    AlphaHelix    -57.69    -47.58       1.0      1SHR
+ASG  LEU A  129  129    H    AlphaHelix    -66.89    -33.68       9.4      1SHR
+ASG  ALA A  130  130    H    AlphaHelix    -66.77    -40.60      48.3      1SHR
+ASG  SER A  131  131    H    AlphaHelix    -65.45    -42.19      30.7      1SHR
+ASG  VAL A  132  132    H    AlphaHelix    -62.41    -43.60      13.2      1SHR
+ASG  SER A  133  133    H    AlphaHelix    -59.76    -42.68      15.8      1SHR
+ASG  THR A  134  134    H    AlphaHelix    -62.20    -40.98      84.4      1SHR
+ASG  VAL A  135  135    H    AlphaHelix    -64.41    -45.37      14.5      1SHR
+ASG  LEU A  136  136    H    AlphaHelix    -70.83    -18.51      13.6      1SHR
+ASG  THR A  137  137    H    AlphaHelix   -106.01      4.56      37.7      1SHR
+ASG  SER A  138  138    C          Coil   -106.28    142.90      44.5      1SHR
+ASG  LYS A  139  139    C          Coil   -103.63    110.21     146.4      1SHR
+ASG  TYR A  140  140    C          Coil   -129.44     14.68      84.5      1SHR
+ASG  ARG A  141  141    C          Coil    -87.94    360.00     230.5      1SHR

@@ -1,0 +1,509 @@
+REM  --------------------------------------------------------------------  4J9T
+REM                                                                        4J9T
+REM  STRIDE: Knowledge-based secondary structure assignment                4J9T
+REM  Please cite: D.Frishman & P.Argos, Proteins XX, XXX-XXX, 1995         4J9T
+REM                                                                        4J9T
+REM  Residue accessible surface area calculation                           4J9T
+REM  Please cite: F.Eisenhaber & P.Argos, J.Comp.Chem. 14, 1272-1280, 1993 4J9T
+REM               F.Eisenhaber et al., J.Comp.Chem., 1994, submitted       4J9T
+REM                                                                        4J9T
+REM  ------------------------ General information -----------------------  4J9T
+REM                                                                        4J9T
+HDR  STRUCTURAL GENOMICS, UNKNOWN FUNCTION   17-FEB-13   4J9T              4J9T
+CMP  MOL_ID: 1;                                                            4J9T
+CMP   MOLECULE: DESIGNED UNNATURAL AMINO ACID DEPENDENT METALLOPRO         4J9T
+CMP   CHAIN: A;                                                            4J9T
+CMP   SYNONYM: NEURAMINIDASE, SIALIDASE;                                   4J9T
+CMP   ENGINEERED: YES;                                                     4J9T
+CMP   MUTATION: YES                                                        4J9T
+SRC  MOL_ID: 1;                                                            4J9T
+SRC   ORGANISM_SCIENTIFIC: MICROMONOSPORA VIRIDIFACIENS;                   4J9T
+SRC   ORGANISM_TAXID: 1881;                                                4J9T
+SRC   GENE: NEDA;                                                          4J9T
+SRC   EXPRESSION_SYSTEM: ESCHERICHIA COLI;                                 4J9T
+SRC   EXPRESSION_SYSTEM_TAXID: 469008;                                     4J9T
+SRC   EXPRESSION_SYSTEM_STRAIN: BL21(DE3);                                 4J9T
+SRC   EXPRESSION_SYSTEM_VECTOR_TYPE: PLASMID;                              4J9T
+SRC   EXPRESSION_SYSTEM_PLASMID: PET29B                                    4J9T
+AUT  F.FOROUHAR,S.LEW,J.SEETHARAMAN,J.H.MILLS,S.D.KHARE,J.K.EVERET         4J9T
+AUT   D.BAKER,G.T.MONTELIONE,J.F.HUNT,L.TONG,NORTHEAST STRUCTURAL          4J9T
+AUT   CONSORTIUM (NESG)                                                    4J9T
+REM                                                                        4J9T
+REM  -------------------- Secondary structure summary -------------------  4J9T
+REM                                                                        4J9T
+CHN  ./pdb4j9t.pdb A                                                       4J9T
+REM                                                                        4J9T
+REM                .         .         .         .         .               4J9T
+SEQ  1    EPLYTEQDLAVNGREGFPNYSHPALTVTPDGDLLASYDGRPTGIAAPGPN   50          4J9T
+STR          EEEEEEEETTTTTTTEEEEEEEEETTTT EEEEEEEE    TTTT                 4J9T
+REM                                                                        4J9T
+REM                .         .         .         .         .               4J9T
+SEQ  51   SILQRRSTDGGRTWGEQQVVSAGQTTAPIKGFSHPSYLVDRETGTIFNFH  100          4J9T
+STR       EEEEEEETTTTTTT   EEEET B TTTTBEEEEEEEEETTTTT EEEEE               4J9T
+REM                                                                        4J9T
+REM                .         .         .         .         .               4J9T
+SEQ  101  VYSQRQGWEGSRPGTDPADPNVLHANVATSTDGGLTWSHRTITADITPDP  150          4J9T
+STR       EEETTTTTTTT    TTTTTTT EEEEEEETTTTTTTEEEE GGG TTTT               4J9T
+REM                                                                        4J9T
+REM                .         .         .         .         .               4J9T
+SEQ  151  GWRSRFAASGEGIQLRYGPHAGRLIQQYAIINAAGAIQAVSVYSDDHGRT  200          4J9T
+STR       TT EEEE  EE EEE TTTTTTEEEEEEEEETTTT EEEEEEEETTTTTT               4J9T
+REM                                                                        4J9T
+REM                .         .         .         .         .               4J9T
+SEQ  201  WRAGEAVGVGMSHNKTVELSDGRVLLNSADSARSGYRKVAVSTDGGHSYG  250          4J9T
+STR       TEE   BTTTT  EEEEETTTT EEEEE TTTT  EEEEEEETTTTTTT                4J9T
+REM                                                                        4J9T
+REM                .         .         .         .         .               4J9T
+SEQ  251  PVTIDRDLPDPTNDASIIRAFPDAPAGSARAKVLLFSNAASQTSRSQGTI  300          4J9T
+STR         EEEEEEETTTT EEEEETTTTTTTTTGGGG EEEEEE TTTTTEEEEE               4J9T
+REM                                                                        4J9T
+REM                .         .         .         .         .               4J9T
+SEQ  301  RMSCDDGQTWPVSKVFQPGSMSYSTLTALPDGTYGLLYEPGTGIRYANFN  350          4J9T
+STR       EEETTTTTTT EEEEEEEEE  EEEEEETTTT EEEEEETTTEEEEEEE                4J9T
+REM                                                                        4J9T
+REM                                                                        4J9T
+SEQ  351  LAWLG                                               355          4J9T
+STR       GGGG                                                             4J9T
+REM                                                                        4J9T
+REM                                                                        4J9T
+REM                                                                        4J9T
+LOC  310Helix     THR   190 A      ASP    192 A                            4J9T
+LOC  310Helix     ALA   326 A      LYS    329 A                            4J9T
+LOC  310Helix     LEU   398 A      LEU    401 A                            4J9T
+LOC  Strand       TYR    51 A      VAL     58 A                            4J9T
+LOC  Strand       ASN    66 A      VAL     74 A                            4J9T
+LOC  Strand       LEU    80 A      ARG     87 A                            4J9T
+LOC  Strand       SER    98 A      SER    104 A                            4J9T
+LOC  Strand       GLN   115 A      SER    118 A                            4J9T
+LOC  Strand       GLY   128 A      VAL    136 A                            4J9T
+LOC  Strand       ILE   143 A      SER    150 A                            4J9T
+LOC  Strand       HIS   171 A      SER    177 A                            4J9T
+LOC  Strand       SER   185 A      THR    188 A                            4J9T
+LOC  Strand       SER   201 A      ALA    204 A                            4J9T
+LOC  Strand       GLY   207 A      GLU    208 A                            4J9T
+LOC  Strand       ILE   210 A      LEU    212 A                            4J9T
+LOC  Strand       ARG   220 A      ILE    228 A                            4J9T
+LOC  Strand       ILE   234 A      SER    241 A                            4J9T
+LOC  Strand       ARG   249 A      ALA    250 A                            4J9T
+LOC  Strand       ASN   261 A      GLU    265 A                            4J9T
+LOC  Strand       VAL   271 A      SER    275 A                            4J9T
+LOC  Strand       TYR   283 A      SER    289 A                            4J9T
+LOC  Strand       THR   300 A      PRO    306 A                            4J9T
+LOC  Strand       ALA   312 A      ARG    316 A                            4J9T
+LOC  Strand       LEU   331 A      ALA    336 A                            4J9T
+LOC  Strand       SER   343 A      SER    350 A                            4J9T
+LOC  Strand       VAL   359 A      SER    367 A                            4J9T
+LOC  Strand       TYR   370 A      ALA    375 A                            4J9T
+LOC  Strand       TYR   381 A      GLU    386 A                            4J9T
+LOC  Strand       GLY   390 A      PHE    396 A                            4J9T
+LOC  TurnVIII     ASP    55 A      VAL     58 A                            4J9T
+LOC  TurnII       VAL    58 A      ARG     61 A                            4J9T
+LOC  TurnIV       GLY    60 A      GLY     63 A                            4J9T
+LOC  TurnI'       ARG    61 A      PHE     64 A                            4J9T
+LOC  TurnVIII     PHE    64 A      TYR     67 A                            4J9T
+LOC  TurnI        THR    75 A      GLY     78 A                            4J9T
+LOC  TurnIV       ALA    92 A      GLY     95 A                            4J9T
+LOC  TurnIV       SER   104 A      GLY    107 A                            4J9T
+LOC  TurnI'       ASP   106 A      ARG    109 A                            4J9T
+LOC  TurnVIII     GLY   108 A      TRP    111 A                            4J9T
+LOC  TurnVIII     VAL   116 A      ALA    119 A                            4J9T
+LOC  TurnIV       THR   123 A      ILE    126 A                            4J9T
+LOC  TurnI        ASP   137 A      THR    140 A                            4J9T
+LOC  TurnI        ARG   138 A      GLY    141 A                            4J9T
+LOC  TurnIV       SER   150 A      GLN    153 A                            4J9T
+LOC  TurnI        GLY   154 A      GLY    157 A                            4J9T
+LOC  TurnI        TRP   155 A      SER    158 A                            4J9T
+LOC  TurnI        ASP   163 A      ASP    166 A                            4J9T
+LOC  TurnI        ASP   166 A      VAL    169 A                            4J9T
+LOC  TurnIV       SER   177 A      GLY    180 A                            4J9T
+LOC  TurnI'       ASP   179 A      LEU    182 A                            4J9T
+LOC  TurnVIII     GLY   181 A      TRP    184 A                            4J9T
+LOC  TurnVIII     THR   194 A      PRO    197 A                            4J9T
+LOC  TurnI        ASP   196 A      TRP    199 A                            4J9T
+LOC  TurnIV       TYR   214 A      HIS    217 A                            4J9T
+LOC  TurnI        GLY   215 A      ALA    218 A                            4J9T
+LOC  TurnII       HIS   217 A      ARG    220 A                            4J9T
+LOC  TurnI        ASN   229 A      GLY    232 A                            4J9T
+LOC  TurnIV       SER   241 A      HIS    244 A                            4J9T
+LOC  TurnI'       ASP   243 A      ARG    246 A                            4J9T
+LOC  TurnVIII     GLY   245 A      TRP    248 A                            4J9T
+LOC  TurnIV       GLY   255 A      MET    258 A                            4J9T
+LOC  TurnI        LEU   266 A      GLY    269 A                            4J9T
+LOC  TurnI        ASP   277 A      ARG    280 A                            4J9T
+LOC  TurnIV       SER   289 A      GLY    292 A                            4J9T
+LOC  TurnI'       ASP   291 A      HIS    294 A                            4J9T
+LOC  TurnVIII     GLY   293 A      TYR    296 A                            4J9T
+LOC  TurnI        ASP   302 A      LEU    305 A                            4J9T
+LOC  TurnIV       ARG   303 A      PRO    306 A                            4J9T
+LOC  TurnIV       ASP   307 A      ASN    310 A                            4J9T
+LOC  TurnVIII     ARG   316 A      PRO    319 A                            4J9T
+LOC  TurnI        PHE   318 A      ALA    321 A                            4J9T
+LOC  TurnII       PRO   322 A      SER    325 A                            4J9T
+LOC  TurnI        SER   338 A      SER    341 A                            4J9T
+LOC  TurnIV       SER   350 A      ASP    353 A                            4J9T
+LOC  TurnI'       ASP   352 A      GLN    355 A                            4J9T
+LOC  TurnVIII     GLY   354 A      TRP    357 A                            4J9T
+LOC  TurnVIII     VAL   362 A      PRO    365 A                            4J9T
+LOC  TurnI        LEU   376 A      GLY    379 A                            4J9T
+LOC  TurnIV       GLU   386 A      THR    389 A                            4J9T
+LOC  TurnIV       PRO   387 A      GLY    390 A                            4J9T
+LOC  GammaInv     SER   341 A      SER    343 A                            4J9T
+REM                                                                        4J9T
+REM  --------------- Detailed secondary structure assignment-------------  4J9T
+REM                                                                        4J9T
+REM  |---Residue---|    |--Structure--|   |-Phi-|   |-Psi-|  |-Area-|      4J9T
+ASG  GLU A   48    1    C          Coil    360.00    -40.28     196.9      4J9T
+ASG  PRO A   49    2    C          Coil    -54.57    138.69      82.7      4J9T
+ASG  LEU A   50    3    C          Coil   -126.96    125.93      50.8      4J9T
+ASG  TYR A   51    4    E        Strand   -147.89    107.20      60.8      4J9T
+ASG  THR A   52    5    E        Strand   -116.25    159.16      64.0      4J9T
+ASG  GLU A   53    6    E        Strand   -151.51    149.12      59.4      4J9T
+ASG  GLN A   54    7    E        Strand   -156.12    145.07      67.0      4J9T
+ASG  ASP A   55    8    E        Strand    -72.94    137.66      54.1      4J9T
+ASG  LEU A   56    9    E        Strand   -103.62    -24.64       6.2      4J9T
+ASG  ALA A   57   10    E        Strand   -147.05    130.34       5.0      4J9T
+ASG  VAL A   58   11    E        Strand   -115.91    126.39      53.2      4J9T
+ASG  ASN A   59   12    T          Turn    -48.84    126.09      45.1      4J9T
+ASG  GLY A   60   13    T          Turn     95.38    -11.73      53.1      4J9T
+ASG  ARG A   61   14    T          Turn   -107.50    147.53     173.8      4J9T
+ASG  GLU A   62   15    T          Turn     67.39     23.64     155.9      4J9T
+ASG  GLY A   63   16    T          Turn    111.65     -4.86      62.6      4J9T
+ASG  PHE A   64   17    T          Turn   -135.63    133.04      27.4      4J9T
+ASG  PRO A   65   18    T          Turn    -62.44    -30.03      38.8      4J9T
+ASG  ASN A   66   19    E        Strand   -142.72    135.65      63.9      4J9T
+ASG  TYR A   67   20    E        Strand   -120.99    138.96       7.3      4J9T
+ASG  SER A   68   21    E        Strand   -157.64    164.94      24.7      4J9T
+ASG  HIS A   69   22    E        Strand     72.53     74.08      30.5      4J9T
+ASG  PRO A   70   23    E        Strand    -73.82    145.66       0.0      4J9T
+ASG  ALA A   71   24    E        Strand   -135.98    136.77       0.0      4J9T
+ASG  LEU A   72   25    E        Strand   -140.63    141.08       0.0      4J9T
+ASG  THR A   73   26    E        Strand   -156.72    170.98       0.0      4J9T
+ASG  VAL A   74   27    E        Strand   -115.06    128.39       7.2      4J9T
+ASG  THR A   75   28    T          Turn    -74.30    163.25       2.6      4J9T
+ASG  PRO A   76   29    T          Turn    -55.66    -32.54      62.3      4J9T
+ASG  ASP A   77   30    T          Turn    -77.41    -13.94     149.5      4J9T
+ASG  GLY A   78   31    T          Turn    108.33      4.82      27.1      4J9T
+ASG  ASP A   79   32    C          Coil    -76.72    152.62      31.9      4J9T
+ASG  LEU A   80   33    E        Strand    -95.70    138.07       1.2      4J9T
+ASG  LEU A   81   34    E        Strand   -117.74    128.62       0.0      4J9T
+ASG  ALA A   82   35    E        Strand   -114.28    128.42       0.0      4J9T
+ASG  SER A   83   36    E        Strand   -128.83    156.11       0.0      4J9T
+ASG  TYR A   84   37    E        Strand   -170.61    170.45       0.0      4J9T
+ASG  ASP A   85   38    E        Strand   -106.43    150.96       0.2      4J9T
+ASG  GLY A   86   39    E        Strand   -114.56    131.25       0.0      4J9T
+ASG  ARG A   87   40    E        Strand   -103.44    107.55      72.2      4J9T
+ASG  PRO A   88   41    C          Coil    -69.76    162.21      20.1      4J9T
+ASG  THR A   89   42    C          Coil    -54.50    129.85     124.8      4J9T
+ASG  GLY A   90   43    C          Coil    153.38    169.55      39.4      4J9T
+ASG  ILE A   91   44    C          Coil   -111.46      2.97     167.6      4J9T
+ASG  ALA A   92   45    T          Turn    -66.36    143.62      44.9      4J9T
+ASG  ALA A   93   46    T          Turn   -151.19    120.57      92.3      4J9T
+ASG  PRO A   94   47    T          Turn    -66.49    138.48      34.1      4J9T
+ASG  GLY A   95   48    T          Turn    -78.30    166.36       9.2      4J9T
+ASG  PRO A   96   49    C          Coil    -79.61     63.97      14.2      4J9T
+ASG  ASN A   97   50    C          Coil    -69.05    159.66      18.4      4J9T
+ASG  SER A   98   51    E        Strand   -120.59    150.37      11.2      4J9T
+ASG  ILE A   99   52    E        Strand    -91.14    127.70       0.0      4J9T
+ASG  LEU A  100   53    E        Strand   -116.71    162.46       1.2      4J9T
+ASG  GLN A  101   54    E        Strand   -147.12    140.06       7.0      4J9T
+ASG  ARG A  102   55    E        Strand   -125.87    144.48      52.1      4J9T
+ASG  ARG A  103   56    E        Strand   -115.99    137.90      43.7      4J9T
+ASG  SER A  104   57    E        Strand   -115.88    127.22       0.4      4J9T
+ASG  THR A  105   58    T          Turn   -103.29      5.37     101.5      4J9T
+ASG  ASP A  106   59    T          Turn   -123.33     36.90      57.3      4J9T
+ASG  GLY A  107   60    T          Turn     75.79     17.10      20.6      4J9T
+ASG  GLY A  108   61    T          Turn    104.68     -1.86       3.4      4J9T
+ASG  ARG A  109   62    T          Turn    -70.23    -47.62     134.8      4J9T
+ASG  THR A  110   63    T          Turn   -130.47    157.47      82.1      4J9T
+ASG  TRP A  111   64    T          Turn   -133.55    137.82      22.8      4J9T
+ASG  GLY A  112   65    C          Coil    -78.33   -170.92      36.6      4J9T
+ASG  GLU A  113   66    C          Coil    -67.92    146.34     155.7      4J9T
+ASG  GLN A  114   67    C          Coil    -65.52    122.02      41.8      4J9T
+ASG  GLN A  115   68    E        Strand   -113.77    156.23      97.3      4J9T
+ASG  VAL A  116   69    E        Strand    -98.87    116.58      80.8      4J9T
+ASG  VAL A  117   70    E        Strand    -79.86    -50.98      10.0      4J9T
+ASG  SER A  118   71    E        Strand   -131.61    122.22       5.4      4J9T
+ASG  ALA A  119   72    T          Turn    -93.72    122.55      65.6      4J9T
+ASG  GLY A  120   73    C          Coil    -61.32    153.70      17.4      4J9T
+ASG  GLN A  121   74    B        Bridge   -105.43    115.04      67.2      4J9T
+ASG  THR A  122   75    C          Coil    -91.82     -9.04      94.9      4J9T
+ASG  THR A  123   76    T          Turn   -102.13    148.73      99.4      4J9T
+ASG  ALA A  124   77    T          Turn    -60.71    135.60      79.9      4J9T
+ASG  PRO A  125   78    T          Turn    -76.48    120.08      79.1      4J9T
+ASG  ILE A  126   79    T          Turn    -61.92    139.66      46.9      4J9T
+ASG  LYS A  127   80    B        Bridge   -137.65    136.41      45.1      4J9T
+ASG  GLY A  128   81    E        Strand   -128.63    151.75       0.4      4J9T
+ASG  PHE A  129   82    E        Strand   -132.89    126.06      23.1      4J9T
+ASG  SER A  130   83    E        Strand   -150.25    169.53      12.8      4J9T
+ASG  HIS A  131   84    E        Strand     60.98     64.00      38.7      4J9T
+ASG  PRO A  132   85    E        Strand    -73.64    147.78       0.0      4J9T
+ASG  SER A  133   86    E        Strand   -134.37    126.93       0.4      4J9T
+ASG  TYR A  134   87    E        Strand    -83.69    150.53       0.0      4J9T
+ASG  LEU A  135   88    E        Strand   -149.01    118.80       0.0      4J9T
+ASG  VAL A  136   89    E        Strand   -102.60    127.87       5.2      4J9T
+ASG  ASP A  137   90    T          Turn    -85.39    106.18       0.0      4J9T
+ASG  ARG A  138   91    T          Turn    -80.39     -9.80      92.5      4J9T
+ASG  GLU A  139   92    T          Turn    -81.19    -39.25     109.5      4J9T
+ASG  THR A  140   93    T          Turn   -105.07    -21.57      70.1      4J9T
+ASG  GLY A  141   94    T          Turn     91.92     -1.29      23.0      4J9T
+ASG  THR A  142   95    C          Coil    -73.97    144.59      21.4      4J9T
+ASG  ILE A  143   96    E        Strand   -118.39    135.37       0.0      4J9T
+ASG  PHE A  144   97    E        Strand   -114.67    146.84       1.4      4J9T
+ASG  ASN A  145   98    E        Strand   -130.46    104.71       0.0      4J9T
+ASG  PHE A  146   99    E        Strand    -82.32    142.79       0.0      4J9T
+ASG  HIS A  147  100    E        Strand   -161.47    161.08       1.7      4J9T
+ASG  VAL A  148  101    E        Strand    -63.50    142.32       8.2      4J9T
+ASG  TYR A  149  102    E        Strand   -121.00    106.98      21.6      4J9T
+ASG  SER A  150  103    E        Strand   -107.17    154.21       3.4      4J9T
+ASG  GLN A  151  104    T          Turn   -130.50    -94.70      22.3      4J9T
+ASG  ARG A  152  105    T          Turn    -89.04    -26.10     176.7      4J9T
+ASG  GLN A  153  106    T          Turn   -123.00    142.49      53.1      4J9T
+ASG  GLY A  154  107    T          Turn    -93.81   -159.57      20.5      4J9T
+ASG  TRP A  155  108    T          Turn    -51.07    -54.15      57.2      4J9T
+ASG  GLU A  156  109    T          Turn    -72.05    -34.20     156.2      4J9T
+ASG  GLY A  157  110    T          Turn    -85.54    -14.39      34.9      4J9T
+ASG  SER A  158  111    T          Turn    -59.64    144.70       2.1      4J9T
+ASG  ARG A  159  112    C          Coil   -122.84    169.06     121.9      4J9T
+ASG  PRO A  160  113    C          Coil    -56.30    147.59      48.0      4J9T
+ASG  GLY A  161  114    C          Coil    140.38    152.24      25.6      4J9T
+ASG  THR A  162  115    C          Coil   -131.43      5.19      49.3      4J9T
+ASG  ASP A  163  116    T          Turn    -74.95    119.57      97.1      4J9T
+ASG  PRO A  164  117    T          Turn    -55.73    -26.31      59.3      4J9T
+ASG  ALA A  165  118    T          Turn    -75.36    -10.70      76.5      4J9T
+ASG  ASP A  166  119    T          Turn    -84.76    112.66      35.7      4J9T
+ASG  PRO A  167  120    T          Turn    -79.89     -3.43      50.7      4J9T
+ASG  ASN A  168  121    T          Turn    -96.63      7.94      24.7      4J9T
+ASG  VAL A  169  122    T          Turn   -106.03    136.04       0.0      4J9T
+ASG  LEU A  170  123    C          Coil    -82.46    109.71       6.6      4J9T
+ASG  HIS A  171  124    E        Strand    -90.17    155.77       0.3      4J9T
+ASG  ALA A  172  125    E        Strand   -104.64    117.83       2.3      4J9T
+ASG  ASN A  173  126    E        Strand   -110.88    159.22      10.4      4J9T
+ASG  VAL A  174  127    E        Strand   -140.95    134.94       0.0      4J9T
+ASG  ALA A  175  128    E        Strand   -101.78    140.46       0.0      4J9T
+ASG  THR A  176  129    E        Strand   -122.18    133.62      18.0      4J9T
+ASG  SER A  177  130    E        Strand   -129.20    129.68       0.6      4J9T
+ASG  THR A  178  131    T          Turn   -106.38      6.89     115.2      4J9T
+ASG  ASP A  179  132    T          Turn   -120.85     38.50      56.8      4J9T
+ASG  GLY A  180  133    T          Turn     73.00     22.65      13.4      4J9T
+ASG  GLY A  181  134    T          Turn     89.55     10.09       0.6      4J9T
+ASG  LEU A  182  135    T          Turn    -72.80    -45.80     119.2      4J9T
+ASG  THR A  183  136    T          Turn   -134.19    159.84      86.3      4J9T
+ASG  TRP A  184  137    T          Turn   -135.82    144.87      40.6      4J9T
+ASG  SER A  185  138    E        Strand   -110.21    155.36      68.9      4J9T
+ASG  HIS A  186  139    E        Strand   -125.63    147.07      92.5      4J9T
+ASG  ARG A  187  140    E        Strand   -140.98    138.11      69.4      4J9T
+ASG  THR A  188  141    E        Strand    -91.04    125.66      46.1      4J9T
+ASG  ILE A  189  142    C          Coil   -119.25     11.57       0.6      4J9T
+ASG  THR A  190  143    G      310Helix    -48.76    -48.96       0.2      4J9T
+ASG  ALA A  191  144    G      310Helix    -59.07    -35.07      56.5      4J9T
+ASG  ASP A  192  145    G      310Helix    -71.54    -23.28      89.2      4J9T
+ASG  ILE A  193  146    C          Coil   -118.21     19.90       5.0      4J9T
+ASG  THR A  194  147    T          Turn   -124.58     77.02      15.5      4J9T
+ASG  PRO A  195  148    T          Turn    -74.16    -13.90      85.6      4J9T
+ASG  ASP A  196  149    T          Turn   -120.29    115.99      73.4      4J9T
+ASG  PRO A  197  150    T          Turn    -66.06    -11.70     102.6      4J9T
+ASG  GLY A  198  151    T          Turn    -75.40    -16.38      17.2      4J9T
+ASG  TRP A  199  152    T          Turn    -64.34    121.61      17.4      4J9T
+ASG  ARG A  200  153    C          Coil    -92.05    -23.71      98.0      4J9T
+ASG  SER A  201  154    E        Strand   -163.22    155.78       0.0      4J9T
+ASG  ARG A  202  155    E        Strand   -160.88    156.61       2.8      4J9T
+ASG  PHE A  203  156    E        Strand   -152.61    145.57      22.9      4J9T
+ASG  ALA A  204  157    E        Strand    -69.34    131.85       1.9      4J9T
+ASG  ALA A  205  158    C          Coil    -65.36    121.35       0.0      4J9T
+ASG  SER A  206  159    C          Coil    -63.47    147.28       1.2      4J9T
+ASG  GLY A  207  160    E        Strand    137.96   -121.05       0.0      4J9T
+ASG  GLU A  208  161    E        Strand   -150.09    130.20      33.7      4J9T
+ASG  GLY A  209  162    C          Coil    -87.59   -172.74       9.5      4J9T
+ASG  ILE A  210  163    E        Strand   -135.33    162.31      33.3      4J9T
+ASG  GLN A  211  164    E        Strand   -119.08    128.84       5.8      4J9T
+ASG  LEU A  212  165    E        Strand    -66.07    139.64       2.6      4J9T
+ASG  ARG A  213  166    C          Coil   -104.23    -20.27      76.8      4J9T
+ASG  TYR A  214  167    T          Turn   -113.94    159.79      28.1      4J9T
+ASG  GLY A  215  168    T          Turn     78.51   -173.03      55.0      4J9T
+ASG  PRO A  216  169    T          Turn    -64.60    -21.50     127.8      4J9T
+ASG  HIS A  217  170    T          Turn   -104.95     17.02      60.8      4J9T
+ASG  ALA A  218  171    T          Turn    -48.36    133.76      47.2      4J9T
+ASG  GLY A  219  172    T          Turn    100.32    -16.29       5.0      4J9T
+ASG  ARG A  220  173    E        Strand    -60.41    134.11      10.4      4J9T
+ASG  LEU A  221  174    E        Strand    -96.15    132.00       0.0      4J9T
+ASG  ILE A  222  175    E        Strand   -130.07    122.90       0.2      4J9T
+ASG  GLN A  223  176    E        Strand   -121.53    127.69       2.2      4J9T
+ASG  GLN A  224  177    E        Strand    -80.96    143.72       3.1      4J9T
+ASG  TYR A  225  178    E        Strand   -124.49    156.34       1.6      4J9T
+ASG  ALA A  226  179    E        Strand   -109.72    143.62       0.0      4J9T
+ASG  ILE A  227  180    E        Strand   -131.38    157.82       2.4      4J9T
+ASG  ILE A  228  181    E        Strand   -104.83    119.22      13.8      4J9T
+ASG  ASN A  229  182    T          Turn    -85.82   -176.40      23.7      4J9T
+ASG  ALA A  230  183    T          Turn    -60.26    -39.09      65.0      4J9T
+ASG  ALA A  231  184    T          Turn    -79.56      3.03      94.2      4J9T
+ASG  GLY A  232  185    T          Turn     85.96      5.10      47.4      4J9T
+ASG  ALA A  233  186    C          Coil    -79.51    147.92      21.4      4J9T
+ASG  ILE A  234  187    E        Strand    -93.08    121.77      32.0      4J9T
+ASG  GLN A  235  188    E        Strand   -121.07    163.81      32.1      4J9T
+ASG  ALA A  236  189    E        Strand   -103.30    146.04       0.0      4J9T
+ASG  VAL A  237  190    E        Strand   -150.35    139.99       1.2      4J9T
+ASG  SER A  238  191    E        Strand    -83.71    134.61       0.0      4J9T
+ASG  VAL A  239  192    E        Strand   -108.13    132.37       0.6      4J9T
+ASG  TYR A  240  193    E        Strand   -145.29    164.04       9.7      4J9T
+ASG  SER A  241  194    E        Strand   -136.81    132.73       1.3      4J9T
+ASG  ASP A  242  195    T          Turn   -106.36      8.99      86.1      4J9T
+ASG  ASP A  243  196    T          Turn   -129.60     37.92      53.2      4J9T
+ASG  HIS A  244  197    T          Turn     64.72     32.54      70.7      4J9T
+ASG  GLY A  245  198    T          Turn     92.13      0.62       2.5      4J9T
+ASG  ARG A  246  199    T          Turn    -65.18    -42.69     199.6      4J9T
+ASG  THR A  247  200    T          Turn   -133.02    145.61      74.7      4J9T
+ASG  TRP A  248  201    T          Turn   -123.76    146.87       8.9      4J9T
+ASG  ARG A  249  202    E        Strand   -142.78    163.37     121.5      4J9T
+ASG  ALA A  250  203    E        Strand    -91.67    148.56       2.7      4J9T
+ASG  GLY A  251  204    C          Coil    -87.51   -153.76       5.3      4J9T
+ASG  GLU A  252  205    C          Coil    -85.17    125.63     106.3      4J9T
+ASG  ALA A  253  206    C          Coil    -68.32    151.42      15.0      4J9T
+ASG  VAL A  254  207    B        Bridge   -139.68    145.02      14.7      4J9T
+ASG  GLY A  255  208    T          Turn     91.55    177.22      23.7      4J9T
+ASG  VAL A  256  209    T          Turn   -140.18    155.33      97.8      4J9T
+ASG  GLY A  257  210    T          Turn     59.26     36.25      12.0      4J9T
+ASG  MET A  258  211    T          Turn    -89.33   -167.80       0.0      4J9T
+ASG  SER A  259  212    C          Coil   -171.25   -160.90      17.3      4J9T
+ASG  HIS A  260  213    C          Coil    -52.19    148.99      10.2      4J9T
+ASG  ASN A  261  214    E        Strand   -160.53    162.24       0.0      4J9T
+ASG  LYS A  262  215    E        Strand   -136.20    156.65      10.0      4J9T
+ASG  THR A  263  216    E        Strand   -127.79    157.34       6.3      4J9T
+ASG  VAL A  264  217    E        Strand   -150.00    144.85       2.6      4J9T
+ASG  GLU A  265  218    E        Strand    -88.07    121.78       9.4      4J9T
+ASG  LEU A  266  219    T          Turn    -80.56    175.13       2.2      4J9T
+ASG  SER A  267  220    T          Turn    -63.94    -20.14       6.1      4J9T
+ASG  ASP A  268  221    T          Turn   -106.74      9.13      89.1      4J9T
+ASG  GLY A  269  222    T          Turn     88.06     -8.18      18.0      4J9T
+ASG  ARG A  270  223    C          Coil    -60.64    151.21      90.0      4J9T
+ASG  VAL A  271  224    E        Strand   -111.26    119.81       0.0      4J9T
+ASG  LEU A  272  225    E        Strand    -94.16    125.54      14.8      4J9T
+ASG  LEU A  273  226    E        Strand   -103.86    133.45       0.0      4J9T
+ASG  ASN A  274  227    E        Strand   -135.33    113.41       1.8      4J9T
+ASG  SER A  275  228    E        Strand   -121.37    149.65       0.0      4J9T
+ASG  ALA A  276  229    C          Coil    -69.19    157.20       0.0      4J9T
+ASG  ASP A  277  230    T          Turn   -110.77    105.93       3.4      4J9T
+ASG  SER A  278  231    T          Turn    -71.74     -9.77      42.7      4J9T
+ASG  ALA A  279  232    T          Turn    -88.16     -0.12      71.2      4J9T
+ASG  ARG A  280  233    T          Turn     63.12     46.56     167.5      4J9T
+ASG  SER A  281  234    C          Coil    -64.91    -22.65      46.8      4J9T
+ASG  GLY A  282  235    C          Coil     97.32      3.49      10.6      4J9T
+ASG  TYR A  283  236    E        Strand   -139.71    162.75      37.3      4J9T
+ASG  ARG A  284  237    E        Strand    -67.08    154.99       0.4      4J9T
+ASG  LYS A  285  238    E        Strand   -105.68    144.85      20.4      4J9T
+ASG  VAL A  286  239    E        Strand   -133.44    150.33      17.3      4J9T
+ASG  ALA A  287  240    E        Strand   -152.48    161.91       3.6      4J9T
+ASG  VAL A  288  241    E        Strand   -131.86    142.40      42.0      4J9T
+ASG  SER A  289  242    E        Strand   -111.84    139.24       0.8      4J9T
+ASG  THR A  290  243    T          Turn   -109.17      8.48     125.2      4J9T
+ASG  ASP A  291  244    T          Turn   -123.67     36.09      46.5      4J9T
+ASG  GLY A  292  245    T          Turn     73.08     26.65       6.8      4J9T
+ASG  GLY A  293  246    T          Turn     93.69     -2.12       0.0      4J9T
+ASG  HIS A  294  247    T          Turn    -65.77    -48.23      49.3      4J9T
+ASG  SER A  295  248    T          Turn   -139.18    157.22      31.5      4J9T
+ASG  TYR A  296  249    T          Turn   -121.85    154.82      15.6      4J9T
+ASG  GLY A  297  250    C          Coil    -77.43   -162.15      31.2      4J9T
+ASG  PRO A  298  251    C          Coil    -61.94    148.11     115.3      4J9T
+ASG  VAL A  299  252    C          Coil    -95.70    131.71      38.2      4J9T
+ASG  THR A  300  253    E        Strand   -131.78    157.30      81.4      4J9T
+ASG  ILE A  301  254    E        Strand    -78.33    142.37      63.6      4J9T
+ASG  ASP A  302  255    E        Strand   -106.11    102.35      22.6      4J9T
+ASG  ARG A  303  256    E        Strand    -63.29    -17.84     170.4      4J9T
+ASG  ASP A  304  257    E        Strand    -75.89    -12.74      77.9      4J9T
+ASG  LEU A  305  258    E        Strand   -124.17     73.60       0.2      4J9T
+ASG  PRO A  306  259    E        Strand    -60.22    148.62      22.8      4J9T
+ASG  ASP A  307  260    T          Turn   -164.62    137.50       0.0      4J9T
+ASG  PRO A  308  261    T          Turn    -91.92     19.04       7.8      4J9T
+ASG  THR A  309  262    T          Turn     71.86     82.12      13.0      4J9T
+ASG  ASN A  310  263    T          Turn   -164.01    163.91       0.0      4J9T
+ASG  ASP A  311  264    C          Coil    -68.74    162.36       0.4      4J9T
+ASG  ALA A  312  265    E        Strand   -151.82    167.97       0.4      4J9T
+ASG  SER A  313  266    E        Strand   -132.64    153.90       3.8      4J9T
+ASG  ILE A  314  267    E        Strand   -143.15    126.98       6.7      4J9T
+ASG  ILE A  315  268    E        Strand   -137.95    159.16      23.9      4J9T
+ASG  ARG A  316  269    E        Strand    -71.79    127.04      15.5      4J9T
+ASG  ALA A  317  270    T          Turn    -66.98    -28.04       2.9      4J9T
+ASG  PHE A  318  271    T          Turn   -133.17     77.98      40.0      4J9T
+ASG  PRO A  319  272    T          Turn    -65.89    -18.43      35.5      4J9T
+ASG  ASP A  320  273    T          Turn   -102.30      3.95     128.1      4J9T
+ASG  ALA A  321  274    T          Turn    -65.99    143.58      11.7      4J9T
+ASG  PRO A  322  275    T          Turn    -68.53    153.80      92.2      4J9T
+ASG  ALA A  323  276    T          Turn    -48.61    132.86      65.5      4J9T
+ASG  GLY A  324  277    T          Turn     78.42     -5.92      45.9      4J9T
+ASG  SER A  325  278    T          Turn    -72.01    158.00      31.5      4J9T
+ASG  ALA A  326  279    G      310Helix    -55.12    -44.59      78.6      4J9T
+ASG  ARG A  327  280    G      310Helix    -66.65    -29.01     155.7      4J9T
+ASG  ALA A  328  281    G      310Helix    -69.67    -12.07       0.0      4J9T
+ASG  LYS A  329  282    G      310Helix    -92.30     -2.28      79.6      4J9T
+ASG  VAL A  330  283    C          Coil    -91.54    124.99      10.8      4J9T
+ASG  LEU A  331  284    E        Strand   -120.58    148.13       0.0      4J9T
+ASG  LEU A  332  285    E        Strand   -117.57    143.32       0.0      4J9T
+ASG  PHE A  333  286    E        Strand   -134.94    134.84       0.0      4J9T
+ASG  SER A  334  287    E        Strand   -124.41    135.94       0.0      4J9T
+ASG  ASN A  335  288    E        Strand   -168.50   -179.00       0.0      4J9T
+ASG  ALA A  336  289    E        Strand    -86.10    117.97       0.0      4J9T
+ASG  ALA A  337  290    C          Coil    -80.83    -17.50       7.1      4J9T
+ASG  SER A  338  291    T          Turn    -65.75    140.37      13.0      4J9T
+ASG  GLN A  339  292    T          Turn    -92.39     -4.06      91.4      4J9T
+ASG  THR A  340  293    T          Turn   -117.27    -15.92     131.6      4J9T
+ASG  SER A  341  294    T          Turn   -157.41    168.11      55.1      4J9T
+ASG  ARG A  342  295    T          Turn    -83.93     82.52      98.0      4J9T
+ASG  SER A  343  296    E        Strand   -156.53    173.93      22.8      4J9T
+ASG  GLN A  344  297    E        Strand     62.97     53.48      88.4      4J9T
+ASG  GLY A  345  298    E        Strand    -58.17    127.67       0.0      4J9T
+ASG  THR A  346  299    E        Strand   -133.26    143.90       4.6      4J9T
+ASG  ILE A  347  300    E        Strand   -104.13    132.98       0.0      4J9T
+ASG  ARG A  348  301    E        Strand   -119.59    150.84      30.7      4J9T
+ASG  MET A  349  302    E        Strand   -125.08    137.18      21.0      4J9T
+ASG  SER A  350  303    E        Strand   -117.01    140.98       0.0      4J9T
+ASG  CYS A  351  304    T          Turn   -112.59     15.16      69.6      4J9T
+ASG  ASP A  352  305    T          Turn   -138.45     48.34      57.6      4J9T
+ASG  ASP A  353  306    T          Turn     62.40     28.55      23.4      4J9T
+ASG  GLY A  354  307    T          Turn     87.36      8.37      11.1      4J9T
+ASG  GLN A  355  308    T          Turn    -72.30    -40.03     143.7      4J9T
+ASG  THR A  356  309    T          Turn   -130.73    147.46      65.2      4J9T
+ASG  TRP A  357  310    T          Turn   -125.60     75.84      22.4      4J9T
+ASG  PRO A  358  311    C          Coil    -77.85     -9.55      91.0      4J9T
+ASG  VAL A  359  312    E        Strand   -128.14    132.30      33.0      4J9T
+ASG  SER A  360  313    E        Strand   -152.77    151.67      62.8      4J9T
+ASG  LYS A  361  314    E        Strand   -154.89    137.48      81.0      4J9T
+ASG  VAL A  362  315    E        Strand    -72.83    128.91      57.7      4J9T
+ASG  PHE A  363  316    E        Strand   -102.85    -19.93      12.6      4J9T
+ASG  GLN A  364  317    E        Strand   -146.22     96.89      37.9      4J9T
+ASG  PRO A  365  318    E        Strand    -60.12    -31.09     100.6      4J9T
+ASG  GLY A  366  319    E        Strand    -89.22   -147.41      31.4      4J9T
+ASG  SER A  367  320    E        Strand    -54.42    132.54      60.0      4J9T
+ASG  MET A  368  321    C          Coil   -157.95    107.92       0.0      4J9T
+ASG  SER A  369  322    C          Coil    -99.48   -104.56      20.8      4J9T
+ASG  TYR A  370  323    E        Strand    -78.81    149.72      20.2      4J9T
+ASG  SER A  371  324    E        Strand   -151.01    148.94       0.0      4J9T
+ASG  THR A  372  325    E        Strand   -144.19    131.61       2.0      4J9T
+ASG  LEU A  373  326    E        Strand    -99.25    147.91       0.5      4J9T
+ASG  THR A  374  327    E        Strand   -144.75    148.04       5.6      4J9T
+ASG  ALA A  375  328    E        Strand    -83.69    126.92      25.5      4J9T
+ASG  LEU A  376  329    T          Turn    -93.96    153.59      10.8      4J9T
+ASG  PRO A  377  330    T          Turn    -55.13    -32.46     100.3      4J9T
+ASG  ASP A  378  331    T          Turn    -80.05      5.97      90.0      4J9T
+ASG  GLY A  379  332    T          Turn     91.78     -3.51      44.5      4J9T
+ASG  THR A  380  333    C          Coil    -96.29   -177.37      15.0      4J9T
+ASG  TYR A  381  334    E        Strand   -127.77    135.23       3.0      4J9T
+ASG  GLY A  382  335    E        Strand    -94.46    146.94       0.0      4J9T
+ASG  LEU A  383  336    E        Strand   -141.69    111.74       0.0      4J9T
+ASG  LEU A  384  337    E        Strand   -109.88    123.41       0.0      4J9T
+ASG  TYR A  385  338    E        Strand   -149.32    172.18       0.0      4J9T
+ASG  GLU A  386  339    E        Strand   -107.61    103.38      18.8      4J9T
+ASG  PRO A  387  340    T          Turn    -87.17      2.43      18.6      4J9T
+ASG  GLY A  388  341    T          Turn    108.29    -22.99      48.4      4J9T
+ASG  THR A  389  342    T          Turn   -101.80      4.56      64.7      4J9T
+ASG  GLY A  390  343    E        Strand    136.03   -126.85       2.4      4J9T
+ASG  ILE A  391  344    E        Strand   -126.34    125.79       0.0      4J9T
+ASG  ARG A  392  345    E        Strand   -120.87    138.90      62.1      4J9T
+ASG  TYR A  393  346    E        Strand   -108.84    123.79       1.4      4J9T
+ASG  ALA A  394  347    E        Strand   -117.66    155.94       0.0      4J9T
+ASG  ASN A  395  348    E        Strand   -135.95    124.73       2.8      4J9T
+ASG  PHE A  396  349    E        Strand   -137.67    162.37       0.0      4J9T
+ASG  ASN A  397  350    C          Coil   -119.02    173.45      29.3      4J9T
+ASG  LEU A  398  351    G      310Helix    -65.48    -30.02      50.4      4J9T
+ASG  ALA A  399  352    G      310Helix    -59.84    -39.23      29.4      4J9T
+ASG  TRP A  400  353    G      310Helix    -61.36    -36.06      27.2      4J9T
+ASG  LEU A  401  354    G      310Helix    -64.72    -36.45       8.5      4J9T
+ASG  GLY A  402  355    C          Coil     68.60    360.00      77.3      4J9T

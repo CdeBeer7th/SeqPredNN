@@ -1,0 +1,346 @@
+REM  --------------------------------------------------------------------  4ITF
+REM                                                                        4ITF
+REM  STRIDE: Knowledge-based secondary structure assignment                4ITF
+REM  Please cite: D.Frishman & P.Argos, Proteins XX, XXX-XXX, 1995         4ITF
+REM                                                                        4ITF
+REM  Residue accessible surface area calculation                           4ITF
+REM  Please cite: F.Eisenhaber & P.Argos, J.Comp.Chem. 14, 1272-1280, 1993 4ITF
+REM               F.Eisenhaber et al., J.Comp.Chem., 1994, submitted       4ITF
+REM                                                                        4ITF
+REM  ------------------------ General information -----------------------  4ITF
+REM                                                                        4ITF
+HDR  TRANSCRIPTION                           18-JAN-13   4ITF              4ITF
+CMP  MOL_ID: 1;                                                            4ITF
+CMP   MOLECULE: VITAMIN D3 RECEPTOR;                                       4ITF
+CMP   CHAIN: A;                                                            4ITF
+CMP   FRAGMENT: LIGAND BINDING DOMAIN, RESIDUES 118-427;                   4ITF
+CMP   SYNONYM: VDR, 1,25-DIHYDROXYVITAMIN D3 RECEPTOR, NUCLEAR REC         4ITF
+CMP   SUBFAMILY 1 GROUP I MEMBER 1;                                        4ITF
+CMP   ENGINEERED: YES;                                                     4ITF
+CMP   MUTATION: YES                                                        4ITF
+SRC  MOL_ID: 1;                                                            4ITF
+SRC   ORGANISM_SCIENTIFIC: HOMO SAPIENS;                                   4ITF
+SRC   ORGANISM_COMMON: HUMAN;                                              4ITF
+SRC   ORGANISM_TAXID: 9606;                                                4ITF
+SRC   GENE: VDR;                                                           4ITF
+SRC   EXPRESSION_SYSTEM: ESCHERICHIA COLI;                                 4ITF
+SRC   EXPRESSION_SYSTEM_TAXID: 562                                         4ITF
+AUT  S.KAKUDA,M.TAKIMOTO-KAMIMURA                                          4ITF
+REM                                                                        4ITF
+REM  -------------------- Secondary structure summary -------------------  4ITF
+REM                                                                        4ITF
+CHN  ./pdb4itf.pdb A                                                       4ITF
+REM                                                                        4ITF
+REM                .         .         .         .         .               4ITF
+SEQ  1    DSLRPKLSEEQQRIIAILLDAHHKTYDPTYSDFCQFRPPVRVNDGSVTLE   50          4ITF
+STR               HHHHHHHHHHHHHHHH  TTTTTTGGG           HHHH               4ITF
+REM                                                                        4ITF
+REM                .         .         .         .         .               4ITF
+SEQ  51   LSQLSMLPHLADLVSYSIQKVIGFAKMIPGFRDLTSEDQIVLLKSSAIEV  100          4ITF
+STR       HHH  HHHHHHHHHHHHHHHHHHHHHHTTTGGG  HHHHHHHHHHHHHHH               4ITF
+REM                                                                        4ITF
+REM                .         .         .         .         .               4ITF
+SEQ  101  IMLRSNESFTMDDMSWTCGNQDYKYRVSDVTKAGHSLELIEPLIKFQVGL  150          4ITF
+STR       HHHHHGGGEETTTTEEE   GGGEE HHHHHHH   HHHHHHHHHHHHHH               4ITF
+REM                                                                        4ITF
+REM                .         .         .         .         .               4ITF
+SEQ  151  KKLNLHEEEHVLLMAICIVSPDRPGVQDAALIEAIQDRLSNTLQTYIRCR  200          4ITF
+STR       HHH   HHHHHHHHHHHH TTTTTTTTTHHHHHHHHHHHHHHHHHHHHHH               4ITF
+REM                                                                        4ITF
+REM                .         .         .         .         .               4ITF
+SEQ  201  HPPPGSHLLYAKMIQKLADLRSLNEEHSKQYRCLSFQPECSMKLTPLVLE  250          4ITF
+STR       TTTTTTTHHHHHHHHHHHHHHHHHHHHHHHHHHHHHTTTTGGG  HHHHH               4ITF
+REM                                                                        4ITF
+REM                                                                        4ITF
+SEQ  251  VFG                                                 253          4ITF
+STR       HH                                                               4ITF
+REM                                                                        4ITF
+REM                                                                        4ITF
+REM                                                                        4ITF
+LOC  AlphaHelix   GLU   126 A      LYS    141 A                            4ITF
+LOC  AlphaHelix   VAL   217 A      GLN    223 A                            4ITF
+LOC  AlphaHelix   MET   226 A      MET    247 A                            4ITF
+LOC  AlphaHelix   SER   256 A      SER    275 A                            4ITF
+LOC  AlphaHelix   VAL   297 A      ALA    303 A                            4ITF
+LOC  AlphaHelix   LEU   307 A      LEU    323 A                            4ITF
+LOC  AlphaHelix   GLU   327 A      ILE    338 A                            4ITF
+LOC  AlphaHelix   ALA   349 A      ARG    370 A                            4ITF
+LOC  AlphaHelix   LEU   378 A      PHE    406 A                            4ITF
+LOC  AlphaHelix   PRO   416 A      PHE    422 A                            4ITF
+LOC  310Helix     PHE   150 A      GLN    152 A                            4ITF
+LOC  310Helix     PHE   251 A      ASP    253 A                            4ITF
+LOC  310Helix     ASN   276 A      SER    278 A                            4ITF
+LOC  310Helix     GLN   291 A      TYR    293 A                            4ITF
+LOC  310Helix     SER   411 A      LYS    413 A                            4ITF
+LOC  Strand       PHE   279 A      THR    280 A                            4ITF
+LOC  Strand       SER   285 A      THR    287 A                            4ITF
+LOC  Strand       LYS   294 A      TYR    295 A                            4ITF
+LOC  TurnI        ASP   144 A      TYR    147 A                            4ITF
+LOC  TurnI        TYR   147 A      PHE    150 A                            4ITF
+LOC  TurnII       ILE   248 A      PHE    251 A                            4ITF
+LOC  TurnIV       THR   280 A      ASP    283 A                            4ITF
+LOC  TurnIV       MET   281 A      MET    284 A                            4ITF
+LOC  TurnIV       SER   340 A      ARG    343 A                            4ITF
+LOC  TurnII       ARG   343 A      VAL    346 A                            4ITF
+LOC  TurnIV       VAL   346 A      ALA    349 A                            4ITF
+LOC  TurnIV       HIS   371 A      PRO    374 A                            4ITF
+LOC  TurnVIb      PRO   373 A      SER    376 A                            4ITF
+LOC  TurnVIII     PRO   374 A      HIS    377 A                            4ITF
+LOC  TurnII       GLN   407 A      CYS    410 A                            4ITF
+REM                                                                        4ITF
+REM  --------------- Detailed secondary structure assignment-------------  4ITF
+REM                                                                        4ITF
+REM  |---Residue---|    |--Structure--|   |-Phi-|   |-Psi-|  |-Area-|      4ITF
+ASG  ASP A  118    1    C          Coil    360.00    113.62     203.2      4ITF
+ASG  SER A  119    2    C          Coil     42.69     61.82     102.5      4ITF
+ASG  LEU A  120    3    C          Coil    -67.47    136.34     140.2      4ITF
+ASG  ARG A  121    4    C          Coil   -120.49     70.95     128.4      4ITF
+ASG  PRO A  122    5    C          Coil    -56.59    140.62      71.1      4ITF
+ASG  LYS A  123    6    C          Coil    -69.42    152.19     190.2      4ITF
+ASG  LEU A  124    7    C          Coil    -63.11    126.39      20.4      4ITF
+ASG  SER A  125    8    C          Coil    -63.60    164.41      49.6      4ITF
+ASG  GLU A  126    9    H    AlphaHelix    -68.98    -34.56     157.1      4ITF
+ASG  GLU A  127   10    H    AlphaHelix    -63.26    -48.73      86.6      4ITF
+ASG  GLN A  128   11    H    AlphaHelix    -55.52    -40.53      31.3      4ITF
+ASG  GLN A  129   12    H    AlphaHelix    -64.70    -47.80      88.9      4ITF
+ASG  ARG A  130   13    H    AlphaHelix    -55.00    -44.57     137.8      4ITF
+ASG  ILE A  131   14    H    AlphaHelix    -52.77    -51.42       3.0      4ITF
+ASG  ILE A  132   15    H    AlphaHelix    -58.48    -59.30      11.0      4ITF
+ASG  ALA A  133   16    H    AlphaHelix    -42.20    -51.94      56.5      4ITF
+ASG  ILE A  134   17    H    AlphaHelix    -58.46    -41.34      63.9      4ITF
+ASG  LEU A  135   18    H    AlphaHelix    -76.84    -45.27       0.0      4ITF
+ASG  LEU A  136   19    H    AlphaHelix    -49.15    -46.62      33.3      4ITF
+ASG  ASP A  137   20    H    AlphaHelix    -70.00    -43.36      68.3      4ITF
+ASG  ALA A  138   21    H    AlphaHelix    -55.54    -41.58       0.0      4ITF
+ASG  HIS A  139   22    H    AlphaHelix    -68.22    -42.13       3.4      4ITF
+ASG  HIS A  140   23    H    AlphaHelix    -59.90    -29.77     106.5      4ITF
+ASG  LYS A  141   24    H    AlphaHelix    -88.44    -16.35     134.0      4ITF
+ASG  THR A  142   25    C          Coil   -117.98     -7.97      10.6      4ITF
+ASG  TYR A  143   26    C          Coil   -125.08    117.48      21.5      4ITF
+ASG  ASP A  144   27    T          Turn    -94.20    101.95      39.5      4ITF
+ASG  PRO A  145   28    T          Turn    -70.51     -0.73      80.6      4ITF
+ASG  THR A  146   29    T          Turn   -106.61    -15.94      96.6      4ITF
+ASG  TYR A  147   30    T          Turn     60.97     38.21      37.6      4ITF
+ASG  SER A  148   31    T          Turn    -80.79    -15.02      78.3      4ITF
+ASG  ASP A  149   32    T          Turn    -78.33     -6.46      46.9      4ITF
+ASG  PHE A  150   33    G      310Helix    -69.13    -34.61       8.3      4ITF
+ASG  CYS A  151   34    G      310Helix    -60.71    -20.54      99.5      4ITF
+ASG  GLN A  152   35    G      310Helix    -73.81    -27.30     147.6      4ITF
+ASG  PHE A  153   36    C          Coil    -70.41    145.38      20.4      4ITF
+ASG  ARG A  154   37    C          Coil    -42.08    136.50      75.0      4ITF
+ASG  PRO A  155   38    C          Coil    -63.14    144.36      94.3      4ITF
+ASG  PRO A  156   39    C          Coil    -66.81    133.96      21.2      4ITF
+ASG  VAL A  157   40    C          Coil   -119.46    119.26      70.9      4ITF
+ASG  ARG A  158   41    C          Coil   -110.96     95.26      85.9      4ITF
+ASG  VAL A  159   42    C          Coil    -76.46    164.84      36.8      4ITF
+ASG  ASN A  160   43    C          Coil    -87.80    137.09     153.5      4ITF
+ASG  ASP A  161   44    C          Coil    179.87    139.44      48.7      4ITF
+ASG  GLY A  162   45    C          Coil   -112.95    360.00     113.8      4ITF
+ASG  SER A  216   46    C          Coil    360.00    112.96      63.6      4ITF
+ASG  VAL A  217   47    H    AlphaHelix    -52.37    -38.49     100.9      4ITF
+ASG  THR A  218   48    H    AlphaHelix    -64.64    -52.80     114.9      4ITF
+ASG  LEU A  219   49    H    AlphaHelix    -63.47    -45.45      49.8      4ITF
+ASG  GLU A  220   50    H    AlphaHelix    -48.98    -54.90      24.1      4ITF
+ASG  LEU A  221   51    H    AlphaHelix    -66.84    -30.24      45.1      4ITF
+ASG  SER A  222   52    H    AlphaHelix    -65.91    -49.27      87.9      4ITF
+ASG  GLN A  223   53    H    AlphaHelix    -86.38    -38.67     103.2      4ITF
+ASG  LEU A  224   54    C          Coil     38.01     57.39       3.3      4ITF
+ASG  SER A  225   55    C          Coil    -75.63    -31.42      14.1      4ITF
+ASG  MET A  226   56    H    AlphaHelix    -94.62     -6.12       0.0      4ITF
+ASG  LEU A  227   57    H    AlphaHelix    -59.69    -50.08       7.8      4ITF
+ASG  PRO A  228   58    H    AlphaHelix    -63.56    -31.91      19.0      4ITF
+ASG  HIS A  229   59    H    AlphaHelix    -71.32    -49.07       0.2      4ITF
+ASG  LEU A  230   60    H    AlphaHelix    -70.11    -31.27      23.0      4ITF
+ASG  ALA A  231   61    H    AlphaHelix    -68.37    -38.51       5.4      4ITF
+ASG  ASP A  232   62    H    AlphaHelix    -67.87    -44.59      28.4      4ITF
+ASG  LEU A  233   63    H    AlphaHelix    -56.48    -49.44      30.5      4ITF
+ASG  VAL A  234   64    H    AlphaHelix    -65.48    -49.06      35.3      4ITF
+ASG  SER A  235   65    H    AlphaHelix    -50.89    -50.88       9.6      4ITF
+ASG  TYR A  236   66    H    AlphaHelix    -54.95    -44.87      35.9      4ITF
+ASG  SER A  237   67    H    AlphaHelix    -65.60    -38.33      13.0      4ITF
+ASG  ILE A  238   68    H    AlphaHelix    -59.61    -45.10       3.4      4ITF
+ASG  GLN A  239   69    H    AlphaHelix    -54.18    -42.99     118.3      4ITF
+ASG  LYS A  240   70    H    AlphaHelix    -66.36    -40.21      58.2      4ITF
+ASG  VAL A  241   71    H    AlphaHelix    -64.34    -51.71       1.2      4ITF
+ASG  ILE A  242   72    H    AlphaHelix    -45.94    -51.18      56.0      4ITF
+ASG  GLY A  243   73    H    AlphaHelix    -50.49    -54.92      22.2      4ITF
+ASG  PHE A  244   74    H    AlphaHelix    -52.80    -49.40       4.0      4ITF
+ASG  ALA A  245   75    H    AlphaHelix    -58.03    -46.25       0.0      4ITF
+ASG  LYS A  246   76    H    AlphaHelix    -50.47    -34.83      89.0      4ITF
+ASG  MET A  247   77    H    AlphaHelix    -92.41      9.16      75.1      4ITF
+ASG  ILE A  248   78    T          Turn    -78.86    120.90       3.0      4ITF
+ASG  PRO A  249   79    T          Turn    -57.08    127.32      25.6      4ITF
+ASG  GLY A  250   80    T          Turn    102.91    -39.18       9.4      4ITF
+ASG  PHE A  251   81    G      310Helix    -53.97    -40.84       0.6      4ITF
+ASG  ARG A  252   82    G      310Helix    -72.55    -22.23     163.7      4ITF
+ASG  ASP A  253   83    G      310Helix    -69.04     -7.52     123.4      4ITF
+ASG  LEU A  254   84    C          Coil    -87.27    153.07       7.5      4ITF
+ASG  THR A  255   85    C          Coil    -60.84    133.21      83.5      4ITF
+ASG  SER A  256   86    H    AlphaHelix    -52.21    -17.32      85.0      4ITF
+ASG  GLU A  257   87    H    AlphaHelix    -72.66    -42.70     122.2      4ITF
+ASG  ASP A  258   88    H    AlphaHelix    -73.06    -15.18       2.4      4ITF
+ASG  GLN A  259   89    H    AlphaHelix    -78.56    -47.08      23.7      4ITF
+ASG  ILE A  260   90    H    AlphaHelix    -56.37    -50.15      85.8      4ITF
+ASG  VAL A  261   91    H    AlphaHelix    -59.85    -50.36      38.1      4ITF
+ASG  LEU A  262   92    H    AlphaHelix    -61.24    -38.03       0.0      4ITF
+ASG  LEU A  263   93    H    AlphaHelix    -67.29    -54.07      29.0      4ITF
+ASG  LYS A  264   94    H    AlphaHelix    -57.44    -36.04      75.7      4ITF
+ASG  SER A  265   95    H    AlphaHelix    -87.33     -4.12      27.2      4ITF
+ASG  SER A  266   96    H    AlphaHelix   -121.19    -17.88       0.0      4ITF
+ASG  ALA A  267   97    H    AlphaHelix    -40.27    -58.47       3.2      4ITF
+ASG  ILE A  268   98    H    AlphaHelix    -59.23    -36.76      11.6      4ITF
+ASG  GLU A  269   99    H    AlphaHelix    -68.21    -47.74       0.8      4ITF
+ASG  VAL A  270  100    H    AlphaHelix    -59.86    -33.82       0.6      4ITF
+ASG  ILE A  271  101    H    AlphaHelix    -67.72    -45.13      18.6      4ITF
+ASG  MET A  272  102    H    AlphaHelix    -60.33    -43.30       8.7      4ITF
+ASG  LEU A  273  103    H    AlphaHelix    -57.60    -52.05       0.0      4ITF
+ASG  ARG A  274  104    H    AlphaHelix    -75.51    -27.41      14.8      4ITF
+ASG  SER A  275  105    H    AlphaHelix    -63.81    -18.06      21.4      4ITF
+ASG  ASN A  276  106    G      310Helix    -58.96    -20.45      14.2      4ITF
+ASG  GLU A  277  107    G      310Helix    -68.35    -31.68      74.2      4ITF
+ASG  SER A  278  108    G      310Helix    -98.14    -13.62      11.9      4ITF
+ASG  PHE A  279  109    E        Strand    -73.73    131.15       0.6      4ITF
+ASG  THR A  280  110    E        Strand   -121.63    136.74      28.7      4ITF
+ASG  MET A  281  111    T          Turn    -79.11      1.07      76.6      4ITF
+ASG  ASP A  282  112    T          Turn    -67.68    -36.74     151.8      4ITF
+ASG  ASP A  283  113    T          Turn   -140.33     14.67      45.0      4ITF
+ASG  MET A  284  114    T          Turn     50.11     56.29      68.5      4ITF
+ASG  SER A  285  115    E        Strand   -133.45    159.72       0.0      4ITF
+ASG  TRP A  286  116    E        Strand    -92.44    122.56      19.0      4ITF
+ASG  THR A  287  117    E        Strand   -118.53    112.37      42.7      4ITF
+ASG  CYS A  288  118    C          Coil   -120.36     29.86       9.5      4ITF
+ASG  GLY A  289  119    C          Coil   -126.08   -138.28      43.2      4ITF
+ASG  ASN A  290  120    C          Coil     35.62    143.94      95.4      4ITF
+ASG  GLN A  291  121    G      310Helix    -17.28    -53.04     148.2      4ITF
+ASG  ASP A  292  122    G      310Helix    -61.03    -32.91      81.8      4ITF
+ASG  TYR A  293  123    G      310Helix   -109.55     28.71      43.3      4ITF
+ASG  LYS A  294  124    E        Strand    -88.56    135.45      51.0      4ITF
+ASG  TYR A  295  125    E        Strand   -128.31    117.90       8.0      4ITF
+ASG  ARG A  296  126    C          Coil   -120.26    165.43      97.0      4ITF
+ASG  VAL A  297  127    H    AlphaHelix    -27.13    -49.46      39.5      4ITF
+ASG  SER A  298  128    H    AlphaHelix    -64.81    -38.29      52.5      4ITF
+ASG  ASP A  299  129    H    AlphaHelix    -68.65    -27.70       8.6      4ITF
+ASG  VAL A  300  130    H    AlphaHelix    -80.17    -38.75      22.6      4ITF
+ASG  THR A  301  131    H    AlphaHelix    -56.12    -45.09      17.6      4ITF
+ASG  LYS A  302  132    H    AlphaHelix    -59.25    -17.89      19.3      4ITF
+ASG  ALA A  303  133    H    AlphaHelix    -91.73     12.56       1.2      4ITF
+ASG  GLY A  304  134    C          Coil     85.18     20.85      16.1      4ITF
+ASG  HIS A  305  135    C          Coil   -107.20    155.57      21.1      4ITF
+ASG  SER A  306  136    C          Coil   -108.66    162.20      40.8      4ITF
+ASG  LEU A  307  137    H    AlphaHelix    -50.32    -35.82      72.0      4ITF
+ASG  GLU A  308  138    H    AlphaHelix    -51.32    -26.13     137.8      4ITF
+ASG  LEU A  309  139    H    AlphaHelix    -99.34    -43.41       7.2      4ITF
+ASG  ILE A  310  140    H    AlphaHelix    -71.27    -39.51       0.6      4ITF
+ASG  GLU A  311  141    H    AlphaHelix    -64.99    -51.73     105.1      4ITF
+ASG  PRO A  312  142    H    AlphaHelix    -63.77    -28.02      50.7      4ITF
+ASG  LEU A  313  143    H    AlphaHelix    -65.94    -43.03      19.8      4ITF
+ASG  ILE A  314  144    H    AlphaHelix    -62.53    -42.81      22.2      4ITF
+ASG  LYS A  315  145    H    AlphaHelix    -55.42    -45.98     149.8      4ITF
+ASG  PHE A  316  146    H    AlphaHelix    -67.51    -32.79       5.7      4ITF
+ASG  GLN A  317  147    H    AlphaHelix    -66.85    -49.50       0.0      4ITF
+ASG  VAL A  318  148    H    AlphaHelix    -59.67    -55.25      31.5      4ITF
+ASG  GLY A  319  149    H    AlphaHelix    -37.69    -49.89      22.6      4ITF
+ASG  LEU A  320  150    H    AlphaHelix    -71.28    -51.37       2.8      4ITF
+ASG  LYS A  321  151    H    AlphaHelix    -45.92    -40.40      65.0      4ITF
+ASG  LYS A  322  152    H    AlphaHelix    -75.06    -24.18     138.4      4ITF
+ASG  LEU A  323  153    H    AlphaHelix    -57.00    -23.50      25.8      4ITF
+ASG  ASN A  324  154    C          Coil     51.75     56.70     124.2      4ITF
+ASG  LEU A  325  155    C          Coil    -70.12    134.75      35.3      4ITF
+ASG  HIS A  326  156    C          Coil    -60.12    147.64      50.8      4ITF
+ASG  GLU A  327  157    H    AlphaHelix    -55.73    -32.79      66.7      4ITF
+ASG  GLU A  328  158    H    AlphaHelix    -54.04    -46.43      44.9      4ITF
+ASG  GLU A  329  159    H    AlphaHelix    -68.10    -39.78       0.0      4ITF
+ASG  HIS A  330  160    H    AlphaHelix    -56.61    -48.80      17.6      4ITF
+ASG  VAL A  331  161    H    AlphaHelix    -70.98    -36.08       0.2      4ITF
+ASG  LEU A  332  162    H    AlphaHelix    -63.38    -48.34       0.0      4ITF
+ASG  LEU A  333  163    H    AlphaHelix    -51.62    -45.76       1.0      4ITF
+ASG  MET A  334  164    H    AlphaHelix    -66.50    -46.99       1.6      4ITF
+ASG  ALA A  335  165    H    AlphaHelix    -53.17    -55.79       0.0      4ITF
+ASG  ILE A  336  166    H    AlphaHelix    -50.89    -48.54       2.8      4ITF
+ASG  CYS A  337  167    H    AlphaHelix    -55.73    -40.14       0.2      4ITF
+ASG  ILE A  338  168    H    AlphaHelix    -70.81    -42.69       0.0      4ITF
+ASG  VAL A  339  169    C          Coil    -96.22     63.22       0.0      4ITF
+ASG  SER A  340  170    T          Turn    -98.80    122.53       2.4      4ITF
+ASG  PRO A  341  171    T          Turn    -74.84    -14.76      20.1      4ITF
+ASG  ASP A  342  172    T          Turn   -102.56     66.31     101.7      4ITF
+ASG  ARG A  343  173    T          Turn   -121.71    135.47      14.1      4ITF
+ASG  PRO A  344  174    T          Turn    -42.97    115.04     117.1      4ITF
+ASG  GLY A  345  175    T          Turn    101.72      0.63      63.5      4ITF
+ASG  VAL A  346  176    T          Turn    -72.78    141.68      31.9      4ITF
+ASG  GLN A  347  177    T          Turn    -88.87    -60.90     142.0      4ITF
+ASG  ASP A  348  178    T          Turn   -102.71     73.41      65.9      4ITF
+ASG  ALA A  349  179    H    AlphaHelix    -59.40    -33.75      38.3      4ITF
+ASG  ALA A  350  180    H    AlphaHelix    -57.67    -53.11      70.1      4ITF
+ASG  LEU A  351  181    H    AlphaHelix    -59.61    -52.18      57.3      4ITF
+ASG  ILE A  352  182    H    AlphaHelix    -58.87    -45.34       0.0      4ITF
+ASG  GLU A  353  183    H    AlphaHelix    -57.37    -30.11     101.4      4ITF
+ASG  ALA A  354  184    H    AlphaHelix    -70.26    -48.24      54.0      4ITF
+ASG  ILE A  355  185    H    AlphaHelix    -55.06    -47.92       6.0      4ITF
+ASG  GLN A  356  186    H    AlphaHelix    -59.01    -46.14      33.3      4ITF
+ASG  ASP A  357  187    H    AlphaHelix    -59.11    -37.75      76.2      4ITF
+ASG  ARG A  358  188    H    AlphaHelix    -62.95    -44.84      80.4      4ITF
+ASG  LEU A  359  189    H    AlphaHelix    -65.52    -44.07       0.2      4ITF
+ASG  SER A  360  190    H    AlphaHelix    -66.90    -39.84       9.0      4ITF
+ASG  ASN A  361  191    H    AlphaHelix    -58.10    -41.48      78.0      4ITF
+ASG  THR A  362  192    H    AlphaHelix    -62.12    -47.16       0.2      4ITF
+ASG  LEU A  363  193    H    AlphaHelix    -61.82    -56.81       0.6      4ITF
+ASG  GLN A  364  194    H    AlphaHelix    -48.84    -45.02      74.7      4ITF
+ASG  THR A  365  195    H    AlphaHelix    -69.92    -48.40      17.9      4ITF
+ASG  TYR A  366  196    H    AlphaHelix    -54.46    -46.31       6.4      4ITF
+ASG  ILE A  367  197    H    AlphaHelix    -55.59    -48.55       1.4      4ITF
+ASG  ARG A  368  198    H    AlphaHelix    -60.54    -36.20      68.0      4ITF
+ASG  CYS A  369  199    H    AlphaHelix    -85.77    -41.92      39.0      4ITF
+ASG  ARG A  370  200    H    AlphaHelix   -116.20      5.87     111.8      4ITF
+ASG  HIS A  371  201    T          Turn   -108.83    118.42      23.4      4ITF
+ASG  PRO A  372  202    T          Turn    -73.81    150.63      83.9      4ITF
+ASG  PRO A  373  203    T          Turn    -45.99    -70.36     113.3      4ITF
+ASG  PRO A  374  204    T          Turn   -110.84    122.01      44.1      4ITF
+ASG  GLY A  375  205    T          Turn    -85.43    -38.00      70.5      4ITF
+ASG  SER A  376  206    T          Turn    -92.33     86.52      55.7      4ITF
+ASG  HIS A  377  207    T          Turn    -82.68     -6.14      74.5      4ITF
+ASG  LEU A  378  208    H    AlphaHelix    -45.84    -24.43     101.5      4ITF
+ASG  LEU A  379  209    H    AlphaHelix    -42.52    -40.40      11.8      4ITF
+ASG  TYR A  380  210    H    AlphaHelix    -62.61    -43.21      40.5      4ITF
+ASG  ALA A  381  211    H    AlphaHelix    -63.58    -40.20      62.4      4ITF
+ASG  LYS A  382  212    H    AlphaHelix    -66.26    -33.01     109.3      4ITF
+ASG  MET A  383  213    H    AlphaHelix    -73.13    -43.48       0.0      4ITF
+ASG  ILE A  384  214    H    AlphaHelix    -61.83    -37.64      67.2      4ITF
+ASG  GLN A  385  215    H    AlphaHelix    -60.12    -39.57     105.4      4ITF
+ASG  LYS A  386  216    H    AlphaHelix    -58.71    -34.43      26.3      4ITF
+ASG  LEU A  387  217    H    AlphaHelix    -71.65    -27.02      20.7      4ITF
+ASG  ALA A  388  218    H    AlphaHelix    -71.66    -52.83      44.7      4ITF
+ASG  ASP A  389  219    H    AlphaHelix    -48.15    -38.99      46.4      4ITF
+ASG  LEU A  390  220    H    AlphaHelix    -60.60    -39.87       0.0      4ITF
+ASG  ARG A  391  221    H    AlphaHelix    -63.42    -36.72      75.0      4ITF
+ASG  SER A  392  222    H    AlphaHelix    -61.11    -54.75      64.9      4ITF
+ASG  LEU A  393  223    H    AlphaHelix    -64.96    -31.97       9.6      4ITF
+ASG  ASN A  394  224    H    AlphaHelix    -59.78    -54.81      29.7      4ITF
+ASG  GLU A  395  225    H    AlphaHelix    -58.86    -40.61     114.0      4ITF
+ASG  GLU A  396  226    H    AlphaHelix    -64.55    -48.16      28.9      4ITF
+ASG  HIS A  397  227    H    AlphaHelix    -55.28    -49.56      17.0      4ITF
+ASG  SER A  398  228    H    AlphaHelix    -60.78    -35.53      50.2      4ITF
+ASG  LYS A  399  229    H    AlphaHelix    -62.85    -47.13     115.7      4ITF
+ASG  GLN A  400  230    H    AlphaHelix    -73.10    -35.41      16.2      4ITF
+ASG  TYR A  401  231    H    AlphaHelix    -56.61    -51.23      15.4      4ITF
+ASG  ARG A  402  232    H    AlphaHelix    -40.49    -50.86     126.8      4ITF
+ASG  CYS A  403  233    H    AlphaHelix    -67.22    -32.25      71.6      4ITF
+ASG  LEU A  404  234    H    AlphaHelix    -66.04    -44.02       3.1      4ITF
+ASG  SER A  405  235    H    AlphaHelix    -51.62    -32.52      59.2      4ITF
+ASG  PHE A  406  236    H    AlphaHelix    -69.60    -20.12     144.5      4ITF
+ASG  GLN A  407  237    T          Turn    -68.73    122.69      56.8      4ITF
+ASG  PRO A  408  238    T          Turn    -63.98    145.09      97.9      4ITF
+ASG  GLU A  409  239    T          Turn     73.62     10.44     151.5      4ITF
+ASG  CYS A  410  240    T          Turn    -74.71    -36.90       2.7      4ITF
+ASG  SER A  411  241    G      310Helix    -62.37    -31.14      76.4      4ITF
+ASG  MET A  412  242    G      310Helix    -67.69    -22.89     119.7      4ITF
+ASG  LYS A  413  243    G      310Helix    -86.55      1.08      39.9      4ITF
+ASG  LEU A  414  244    C          Coil   -108.11   -152.04      12.5      4ITF
+ASG  THR A  415  245    C          Coil   -137.98    153.55      14.3      4ITF
+ASG  PRO A  416  246    H    AlphaHelix    -45.81    -36.02     112.4      4ITF
+ASG  LEU A  417  247    H    AlphaHelix    -73.51    -46.90      40.2      4ITF
+ASG  VAL A  418  248    H    AlphaHelix    -60.40    -34.99       6.2      4ITF
+ASG  LEU A  419  249    H    AlphaHelix    -65.53    -47.13      62.8      4ITF
+ASG  GLU A  420  250    H    AlphaHelix    -72.49    -40.83     107.3      4ITF
+ASG  VAL A  421  251    H    AlphaHelix    -63.49    -36.52      18.8      4ITF
+ASG  PHE A  422  252    H    AlphaHelix   -106.06    -28.80      40.4      4ITF
+ASG  GLY A  423  253    C          Coil    -62.36    360.00      93.5      4ITF

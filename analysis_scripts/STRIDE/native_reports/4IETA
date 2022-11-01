@@ -1,0 +1,273 @@
+REM  --------------------------------------------------------------------  4IET
+REM                                                                        4IET
+REM  STRIDE: Knowledge-based secondary structure assignment                4IET
+REM  Please cite: D.Frishman & P.Argos, Proteins XX, XXX-XXX, 1995         4IET
+REM                                                                        4IET
+REM  Residue accessible surface area calculation                           4IET
+REM  Please cite: F.Eisenhaber & P.Argos, J.Comp.Chem. 14, 1272-1280, 1993 4IET
+REM               F.Eisenhaber et al., J.Comp.Chem., 1994, submitted       4IET
+REM                                                                        4IET
+REM  ------------------------ General information -----------------------  4IET
+REM                                                                        4IET
+HDR  OXIDOREDUCTASE                          13-DEC-12   4IET              4IET
+CMP  MOL_ID: 1;                                                            4IET
+CMP   MOLECULE: CYSTEINE DIOXYGENASE TYPE 1;                               4IET
+CMP   CHAIN: A;                                                            4IET
+CMP   SYNONYM: CYSTEINE DIOXYGENASE TYPE I, CDO, CDO-I;                    4IET
+CMP   EC: 1.13.11.20;                                                      4IET
+CMP   ENGINEERED: YES                                                      4IET
+SRC  MOL_ID: 1;                                                            4IET
+SRC   ORGANISM_SCIENTIFIC: RATTUS NORVEGICUS;                              4IET
+SRC   ORGANISM_COMMON: BROWN RAT,RAT,RATS;                                 4IET
+SRC   ORGANISM_TAXID: 10116;                                               4IET
+SRC   GENE: CDO1;                                                          4IET
+SRC   EXPRESSION_SYSTEM: ESCHERICHIA COLI;                                 4IET
+SRC   EXPRESSION_SYSTEM_TAXID: 562                                         4IET
+AUT  C.M.DRIGGERS,R.B.COOLEY,P.A.KARPLUS                                   4IET
+REM                                                                        4IET
+REM  -------------------- Secondary structure summary -------------------  4IET
+REM                                                                        4IET
+CHN  ./pdb4iet.pdb A                                                       4IET
+REM                                                                        4IET
+REM                .         .         .         .         .               4IET
+SEQ  1    ELLKPRTLADLIRILHELFAGDEVNVEEVQAVLEAYESNPAEWALYAKFD   50          4IET
+STR              HHHHHHHHHHHH      HHHHHHHHHH    GGG GGGTT B               4IET
+REM                                                                        4IET
+REM                .         .         .         .         .               4IET
+SEQ  51   QYRYTRNLVDQGNGKFNLMILCWGEGHGSSIHDHTDSHCFLKLLQGNLKE  100          4IET
+STR       TTB EEEEEETTTTTTEEEEEEETTTEEEEEE TTTTEEEEEEEE  EEE               4IET
+REM                                                                        4IET
+REM                .         .         .         .         .               4IET
+SEQ  101  TLFDWPDKKSNEMIKKSERTLRENQCAYINDSIGLHRVENVSHTEPAVSL  150          4IET
+STR       EEE           EEEEEEETTTEEEEEETTTTEEEEEE TTTT EEEE               4IET
+REM                                                                        4IET
+REM                .         .         .                                   4IET
+SEQ  151  HLYSPPFDTCHAFDQRTGHKNKVTMTFHSKFGIRTP                186          4IET
+STR       EEEETT  EEEEETTTTT EEEEE  TTEETTEE                               4IET
+REM                                                                        4IET
+REM                                                                        4IET
+REM                                                                        4IET
+LOC  AlphaHelix   LEU    12 A      PHE     23 A                            4IET
+LOC  AlphaHelix   VAL    30 A      ALA     39 A                            4IET
+LOC  310Helix     PRO    44 A      GLU     46 A                            4IET
+LOC  310Helix     ALA    48 A      TYR     50 A                            4IET
+LOC  Strand       THR    59 A      ASP     64 A                            4IET
+LOC  Strand       ASN    71 A      TRP     77 A                            4IET
+LOC  Strand       HIS    81 A      HIS     86 A                            4IET
+LOC  Strand       HIS    92 A      GLN     99 A                            4IET
+LOC  Strand       LEU   102 A      PHE    107 A                            4IET
+LOC  Strand       LYS   119 A      LEU    125 A                            4IET
+LOC  Strand       GLN   129 A      ASN    134 A                            4IET
+LOC  Strand       LEU   139 A      ASN    144 A                            4IET
+LOC  Strand       ALA   151 A      SER    158 A                            4IET
+LOC  Strand       THR   163 A      PHE    167 A                            4IET
+LOC  Strand       LYS   174 A      THR    178 A                            4IET
+LOC  Strand       SER   183 A      LYS    184 A                            4IET
+LOC  Strand       ILE   187 A      ARG    188 A                            4IET
+LOC  TurnI        ASP    54 A      ARG     57 A                            4IET
+LOC  TurnII'      GLN    65 A      GLY     68 A                            4IET
+LOC  TurnIV       GLY    66 A      LYS     69 A                            4IET
+LOC  TurnIV       ASN    67 A      PHE     70 A                            4IET
+LOC  TurnII       GLY    78 A      HIS     81 A                            4IET
+LOC  TurnI'       HIS    88 A      SER     91 A                            4IET
+LOC  TurnII       ARG   126 A      GLN    129 A                            4IET
+LOC  TurnI        ASN   134 A      ILE    137 A                            4IET
+LOC  TurnI        ASP   135 A      GLY    138 A                            4IET
+LOC  TurnIV       SER   146 A      GLU    149 A                            4IET
+LOC  TurnIV       TYR   157 A      PRO    160 A                            4IET
+LOC  TurnI        ASP   168 A      THR    171 A                            4IET
+LOC  TurnI        GLN   169 A      GLY    172 A                            4IET
+LOC  TurnIV       PHE   181 A      LYS    184 A                            4IET
+LOC  TurnIV       SER   183 A      GLY    186 A                            4IET
+LOC  TurnI'       LYS   184 A      ILE    187 A                            4IET
+LOC  GammaInv     TYR    50 A      LYS     52 A                            4IET
+REM                                                                        4IET
+REM  --------------- Detailed secondary structure assignment-------------  4IET
+REM                                                                        4IET
+REM  |---Residue---|    |--Structure--|   |-Phi-|   |-Psi-|  |-Area-|      4IET
+ASG  GLU A    5    1    C          Coil    360.00    111.81     208.4      4IET
+ASG  LEU A    6    2    C          Coil    -87.79    117.74      70.1      4IET
+ASG  LEU A    7    3    C          Coil   -110.92    157.26      99.7      4IET
+ASG  LYS A    8    4    C          Coil    -64.72    124.69     121.9      4IET
+ASG  PRO A    9    5    C          Coil    -67.18    130.39       1.7      4IET
+ASG  ARG A   10    6    C          Coil    -81.51    -23.55     123.7      4IET
+ASG  THR A   11    7    C          Coil   -157.46    168.68      47.9      4IET
+ASG  LEU A   12    8    H    AlphaHelix    -57.63    -43.55       7.8      4IET
+ASG  ALA A   13    9    H    AlphaHelix    -60.55    -40.62      70.8      4IET
+ASG  ASP A   14   10    H    AlphaHelix    -65.00    -43.92      29.9      4IET
+ASG  LEU A   15   11    H    AlphaHelix    -52.93    -47.33       0.0      4IET
+ASG  ILE A   16   12    H    AlphaHelix    -58.72    -45.27      22.9      4IET
+ASG  ARG A   17   13    H    AlphaHelix    -56.71    -45.89     105.3      4IET
+ASG  ILE A   18   14    H    AlphaHelix    -64.84    -39.49       8.0      4IET
+ASG  LEU A   19   15    H    AlphaHelix    -63.68    -38.84       0.0      4IET
+ASG  HIS A   20   16    H    AlphaHelix    -60.23    -35.06      62.3      4IET
+ASG  GLU A   21   17    H    AlphaHelix    -71.28    -42.28     114.8      4IET
+ASG  LEU A   22   18    H    AlphaHelix    -65.72    -27.95      39.1      4IET
+ASG  PHE A   23   19    H    AlphaHelix   -102.85     13.38       3.6      4IET
+ASG  ALA A   24   20    C          Coil    -61.88    -26.93      67.2      4IET
+ASG  GLY A   25   21    C          Coil   -100.11   -164.62      40.1      4IET
+ASG  ASP A   26   22    C          Coil    -95.09    -14.24     145.0      4IET
+ASG  GLU A   27   23    C          Coil   -118.07    176.67     165.5      4IET
+ASG  VAL A   28   24    C          Coil   -131.58    124.29      33.1      4IET
+ASG  ASN A   29   25    C          Coil    -90.24     99.48      66.9      4IET
+ASG  VAL A   30   26    H    AlphaHelix    -63.68    -40.39      18.9      4IET
+ASG  GLU A   31   27    H    AlphaHelix    -68.32    -35.54     137.6      4IET
+ASG  GLU A   32   28    H    AlphaHelix    -67.90    -44.22      75.0      4IET
+ASG  VAL A   33   29    H    AlphaHelix    -63.43    -43.10       1.8      4IET
+ASG  GLN A   34   30    H    AlphaHelix    -62.83    -42.87      56.5      4IET
+ASG  ALA A   35   31    H    AlphaHelix    -61.23    -42.42      50.8      4IET
+ASG  VAL A   36   32    H    AlphaHelix    -70.75    -38.37       3.7      4IET
+ASG  LEU A   37   33    H    AlphaHelix    -61.63    -48.90       3.4      4IET
+ASG  GLU A   38   34    H    AlphaHelix    -58.52    -37.07      95.4      4IET
+ASG  ALA A   39   35    H    AlphaHelix    -72.57    -22.53      37.5      4IET
+ASG  TYR A   40   36    C          Coil    -68.49    119.21       1.2      4IET
+ASG  GLU A   41   37    C          Coil    -84.99    114.27     133.4      4IET
+ASG  SER A   42   38    C          Coil    -53.02    125.31      11.4      4IET
+ASG  ASN A   43   39    C          Coil   -121.50    103.90      65.4      4IET
+ASG  PRO A   44   40    G      310Helix    -52.86    -35.75      69.4      4IET
+ASG  ALA A   45   41    G      310Helix    -58.53    -31.92      82.9      4IET
+ASG  GLU A   46   42    G      310Helix    -75.29    -24.78      56.1      4IET
+ASG  TRP A   47   43    C          Coil   -119.05      5.59       8.0      4IET
+ASG  ALA A   48   44    G      310Helix    -54.93    -36.33      60.4      4IET
+ASG  LEU A   49   45    G      310Helix    -53.37    -36.03      94.9      4IET
+ASG  TYR A   50   46    G      310Helix    -92.70    -11.36      38.9      4IET
+ASG  ALA A   51   47    T          Turn    -87.22     72.16      23.1      4IET
+ASG  LYS A   52   48    T          Turn   -104.27    111.05      52.4      4IET
+ASG  PHE A   53   49    C          Coil    -90.74    157.47      80.8      4IET
+ASG  ASP A   54   50    B        Bridge   -120.80    145.00      54.6      4IET
+ASG  GLN A   55   51    T          Turn    -65.62    -30.04     150.4      4IET
+ASG  TYR A   56   52    T          Turn   -102.83    -24.27     176.6      4IET
+ASG  ARG A   57   53    B        Bridge   -156.55    171.84     122.5      4IET
+ASG  TYR A   58   54    C          Coil    -73.79    154.38      30.1      4IET
+ASG  THR A   59   55    E        Strand   -121.07    153.95       5.5      4IET
+ASG  ARG A   60   56    E        Strand   -117.44    121.09       9.8      4IET
+ASG  ASN A   61   57    E        Strand   -123.63    109.86       0.0      4IET
+ASG  LEU A   62   58    E        Strand    -70.77    132.97       0.0      4IET
+ASG  VAL A   63   59    E        Strand   -106.91    -44.85       6.0      4IET
+ASG  ASP A   64   60    E        Strand   -150.50    142.17      32.1      4IET
+ASG  GLN A   65   61    T          Turn    -97.44      5.72      97.7      4IET
+ASG  GLY A   66   62    T          Turn     66.03   -157.92      21.4      4IET
+ASG  ASN A   67   63    T          Turn   -104.88     27.54      65.4      4IET
+ASG  GLY A   68   64    T          Turn     88.05     10.98      66.6      4IET
+ASG  LYS A   69   65    T          Turn   -120.57    -20.27      58.2      4IET
+ASG  PHE A   70   66    T          Turn   -156.41    158.20       0.0      4IET
+ASG  ASN A   71   67    E        Strand   -113.08    137.20      17.4      4IET
+ASG  LEU A   72   68    E        Strand   -116.31    129.36       0.0      4IET
+ASG  MET A   73   69    E        Strand   -144.81    162.58       0.6      4IET
+ASG  ILE A   74   70    E        Strand   -117.51    128.39       0.0      4IET
+ASG  LEU A   75   71    E        Strand   -108.27    135.14       4.8      4IET
+ASG  CYS A   76   72    E        Strand   -117.72    118.24       0.3      4IET
+ASG  TRP A   77   73    E        Strand   -115.18    108.89       4.0      4IET
+ASG  GLY A   78   74    T          Turn    -61.45    166.00       5.4      4IET
+ASG  GLU A   79   75    T          Turn    -51.99    125.12      90.5      4IET
+ASG  GLY A   80   76    T          Turn     80.63     -4.62      57.3      4IET
+ASG  HIS A   81   77    E        Strand    -76.61    140.48      22.0      4IET
+ASG  GLY A   82   78    E        Strand   -150.67    172.26      33.4      4IET
+ASG  SER A   83   79    E        Strand    -94.96    173.34       8.4      4IET
+ASG  SER A   84   80    E        Strand    -73.92    171.80      45.4      4IET
+ASG  ILE A   85   81    E        Strand    -76.82    125.40       0.7      4IET
+ASG  HIS A   86   82    E        Strand   -147.80    165.43      18.8      4IET
+ASG  ASP A   87   83    C          Coil   -103.55   -171.45       6.4      4IET
+ASG  HIS A   88   84    T          Turn   -137.82     25.55       1.8      4IET
+ASG  THR A   89   85    T          Turn     55.15     46.82      41.7      4IET
+ASG  ASP A   90   86    T          Turn     58.98     25.35     145.6      4IET
+ASG  SER A   91   87    T          Turn   -112.58    155.37       6.2      4IET
+ASG  HIS A   92   88    E        Strand    -68.73    138.93      52.7      4IET
+ASG  CYS A   93   89    E        Strand   -140.01    115.06       2.1      4IET
+ASG  PHE A   94   90    E        Strand   -108.12    143.55       0.2      4IET
+ASG  LEU A   95   91    E        Strand   -139.97    112.11       5.5      4IET
+ASG  LYS A   96   92    E        Strand   -115.27    126.60       0.0      4IET
+ASG  LEU A   97   93    E        Strand    -73.09    127.20       0.0      4IET
+ASG  LEU A   98   94    E        Strand   -101.09    -25.79       0.9      4IET
+ASG  GLN A   99   95    E        Strand   -159.55    138.53      62.5      4IET
+ASG  GLY A  100   96    C          Coil     81.88   -157.80      14.5      4IET
+ASG  ASN A  101   97    C          Coil   -139.67    150.98      68.8      4IET
+ASG  LEU A  102   98    E        Strand   -132.32    146.22       2.0      4IET
+ASG  LYS A  103   99    E        Strand    -97.80    124.11      51.5      4IET
+ASG  GLU A  104  100    E        Strand   -105.09    124.77       2.9      4IET
+ASG  THR A  105  101    E        Strand   -110.24    129.82       7.4      4IET
+ASG  LEU A  106  102    E        Strand    -98.50    139.78      25.3      4IET
+ASG  PHE A  107  103    E        Strand   -130.05    150.69       3.4      4IET
+ASG  ASP A  108  104    C          Coil    -78.23    154.92     100.2      4IET
+ASG  TRP A  109  105    C          Coil    -56.28    129.46     103.3      4IET
+ASG  PRO A  110  106    C          Coil    -65.81    158.57      41.9      4IET
+ASG  ASP A  111  107    C          Coil    -83.35    163.07     140.0      4IET
+ASG  LYS A  112  108    C          Coil    -64.08    -15.23     120.0      4IET
+ASG  LYS A  113  109    C          Coil    -82.60    131.50     154.7      4IET
+ASG  SER A  114  110    C          Coil    -58.06    126.07      81.9      4IET
+ASG  ASN A  115  111    C          Coil   -164.37    153.04     100.2      4IET
+ASG  GLU A  116  112    C          Coil    -58.35    133.76      77.3      4IET
+ASG  MET A  117  113    C          Coil    -84.02    113.07      10.6      4IET
+ASG  ILE A  118  114    C          Coil    -94.59    137.25     116.5      4IET
+ASG  LYS A  119  115    E        Strand    -63.35    137.00     118.8      4IET
+ASG  LYS A  120  116    E        Strand    -87.42    -31.20      84.9      4IET
+ASG  SER A  121  117    E        Strand   -174.67    169.79      54.4      4IET
+ASG  GLU A  122  118    E        Strand   -147.79    151.72      91.5      4IET
+ASG  ARG A  123  119    E        Strand   -148.75    160.37     113.9      4IET
+ASG  THR A  124  120    E        Strand    -99.40    121.85      61.7      4IET
+ASG  LEU A  125  121    E        Strand    -95.01    126.39       3.0      4IET
+ASG  ARG A  126  122    T          Turn   -110.78    163.85     129.7      4IET
+ASG  GLU A  127  123    T          Turn    -41.57    130.82     110.1      4IET
+ASG  ASN A  128  124    T          Turn     74.23     -9.61      42.7      4IET
+ASG  GLN A  129  125    E        Strand    -71.03    145.31      77.8      4IET
+ASG  CYS A  130  126    E        Strand   -117.13    120.59       6.7      4IET
+ASG  ALA A  131  127    E        Strand   -100.53    163.71       2.8      4IET
+ASG  TYR A  132  128    E        Strand   -137.04    138.72      34.0      4IET
+ASG  ILE A  133  129    E        Strand   -139.32    151.67       3.6      4IET
+ASG  ASN A  134  130    E        Strand   -151.12    167.40      27.7      4IET
+ASG  ASP A  135  131    T          Turn    -60.03    -27.53      21.6      4IET
+ASG  SER A  136  132    T          Turn    -71.24    -23.26     107.5      4IET
+ASG  ILE A  137  133    T          Turn    -82.42    -38.79      71.1      4IET
+ASG  GLY A  138  134    T          Turn    144.62   -159.37       1.5      4IET
+ASG  LEU A  139  135    E        Strand   -105.62    162.41       0.0      4IET
+ASG  HIS A  140  136    E        Strand   -148.56    166.97       5.4      4IET
+ASG  ARG A  141  137    E        Strand   -124.14    141.14      49.7      4IET
+ASG  VAL A  142  138    E        Strand   -124.05    134.45       2.6      4IET
+ASG  GLU A  143  139    E        Strand   -144.11    142.32      52.5      4IET
+ASG  ASN A  144  140    E        Strand    -92.32    101.64       2.3      4IET
+ASG  VAL A  145  141    C          Coil    -86.57     -0.31      78.3      4IET
+ASG  SER A  146  142    T          Turn    -64.93    144.29      31.4      4IET
+ASG  HIS A  147  143    T          Turn    -94.69    -11.73     173.6      4IET
+ASG  THR A  148  144    T          Turn   -128.28    -15.67     101.0      4IET
+ASG  GLU A  149  145    T          Turn   -127.08    115.85     110.2      4IET
+ASG  PRO A  150  146    C          Coil    -61.43    156.10      32.8      4IET
+ASG  ALA A  151  147    E        Strand   -121.87    153.91       0.0      4IET
+ASG  VAL A  152  148    E        Strand   -137.35    132.40       0.6      4IET
+ASG  SER A  153  149    E        Strand   -132.82    156.92       0.0      4IET
+ASG  LEU A  154  150    E        Strand   -111.60    123.59       1.3      4IET
+ASG  HIS A  155  151    E        Strand   -119.57    141.33       5.0      4IET
+ASG  LEU A  156  152    E        Strand   -129.50    125.32       0.6      4IET
+ASG  TYR A  157  153    E        Strand   -124.15    134.79      13.2      4IET
+ASG  SER A  158  154    E        Strand   -145.60    123.81       9.4      4IET
+ASG  PRO A  159  155    T          Turn    -67.33    165.57      73.6      4IET
+ASG  PRO A  160  156    T          Turn    -62.68    154.06      50.3      4IET
+ASG  PHE A  161  157    C          Coil   -149.64    149.34      22.0      4IET
+ASG  ASP A  162  158    C          Coil   -127.22     12.22     103.2      4IET
+ASG  THR A  163  159    E        Strand   -132.87    149.43      34.3      4IET
+ASG  CYS A  164  160    E        Strand   -152.35   -173.11       5.4      4IET
+ASG  HIS A  165  161    E        Strand   -116.24    140.74      47.5      4IET
+ASG  ALA A  166  162    E        Strand   -103.49    140.06      11.6      4IET
+ASG  PHE A  167  163    E        Strand   -112.78    137.48      12.0      4IET
+ASG  ASP A  168  164    T          Turn    -82.01    118.99      67.7      4IET
+ASG  GLN A  169  165    T          Turn    -61.65    -22.79      49.4      4IET
+ASG  ARG A  170  166    T          Turn    -83.06    -20.34     134.4      4IET
+ASG  THR A  171  167    T          Turn   -134.94    -21.45      40.3      4IET
+ASG  GLY A  172  168    T          Turn     84.04     -3.01       8.1      4IET
+ASG  HIS A  173  169    C          Coil    -63.48    138.47     129.2      4IET
+ASG  LYS A  174  170    E        Strand   -110.17    153.15     103.7      4IET
+ASG  ASN A  175  171    E        Strand   -134.71    143.89      75.6      4IET
+ASG  LYS A  176  172    E        Strand    -82.28    134.22     148.2      4IET
+ASG  VAL A  177  173    E        Strand   -127.09    143.19      43.1      4IET
+ASG  THR A  178  174    E        Strand   -102.40    126.94     104.4      4IET
+ASG  MET A  179  175    C          Coil    -90.40    146.97      34.6      4IET
+ASG  THR A  180  176    C          Coil   -126.97    155.24      96.4      4IET
+ASG  PHE A  181  177    T          Turn    -96.81    131.62      34.6      4IET
+ASG  HIS A  182  178    T          Turn    -72.59    -33.81      28.8      4IET
+ASG  SER A  183  179    E        Strand   -153.42    161.80       0.0      4IET
+ASG  LYS A  184  180    E        Strand   -139.21    122.54      77.4      4IET
+ASG  PHE A  185  181    T          Turn     57.19     33.88      99.8      4IET
+ASG  GLY A  186  182    T          Turn     91.54     -5.49       7.8      4IET
+ASG  ILE A  187  183    E        Strand   -104.26    123.51     113.3      4IET
+ASG  ARG A  188  184    E        Strand    -61.66    132.31     119.4      4IET
+ASG  THR A  189  185    C          Coil   -126.31     79.47      48.6      4IET
+ASG  PRO A  190  186    C          Coil    -60.86    360.00     144.9      4IET
