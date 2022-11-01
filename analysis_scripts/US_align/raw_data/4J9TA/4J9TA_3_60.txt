@@ -1,0 +1,24 @@
+
+ ********************************************************************
+ * US-align (Version 20220924)                                      *
+ * Universal Structure Alignment of Proteins and Nucleic Acids      *
+ * Reference: C Zhang, M Shine, AM Pyle, Y Zhang. (2022) Nat Methods*
+ * Please email comments and suggestions to yangzhanglab@umich.edu  *
+ ********************************************************************
+
+Name of Structure_1: ./AlphaFold/4J9TA/4J9TA_3_60/4J9TA_3_60_e6ed2_unrelaxed_rank_1_model_4.pdb:A (to be superimposed onto Structure_2)
+Name of Structure_2: ./pdbs/pdb4j9t.pdb:A
+Length of Structure_1: 355 residues
+Length of Structure_2: 355 residues
+
+Aligned length= 327, RMSD=   4.30, Seq_ID=n_identical/n_aligned= 0.135
+TM-score= 0.72365 (normalized by length of Structure_1: L=355, d0=6.85)
+TM-score= 0.72365 (normalized by length of Structure_2: L=355, d0=6.85)
+(You should use TM-score normalized by length of the reference structure)
+
+(":" denotes residue pairs of d < 5.0 Angstrom, "." denotes other aligned residues)
+PRKWHHVEIFVAGQHGFEETHHPSFACCPEGWFILSFCGIPQGSANPGTPATWASFNTHGGRSMGPFRTVFRGIKHKPPQGIDCPMSSIHW-QCGFFFIYFFILCRHG---DAGNKPGW-----SPECPHIWFVWRMFSTHGGREYKFTCVCEMNVPHPGCRSCWTQCGVGHC-ASFGP-----YKGWFIWAFWMLDEEGQRHYMPIFNWH----WGQKFYTGKSMGSGADSSWSSLCCHG-DTRLMWACS-T-D-PGYYFTCVSTDGGRHTGPITFHEHFP-CPASAFCVMIMDP-HMPRGAK--QCMIYWMWWDMNKHDDQHGYYTKATH-AGRECPRWACTCPGPAWSSSFACMPEGCFGCAFCHGEGLVLTLYTRSYLG
+::::::::::::::::::::::::::::..::::::::::::.:....:::::::::::::::::::::::::::.:..  ..:::::::: ::.:.::::::::.::   ...          ....:.:.::::::::    ..::::::.::......  : :::...:: .:.:.     ...:.::::::::  :.:.:.::::..    ....::. . :: :::::::... .  ..::::::: : : .::::::..   : ....:...:::. ::::::::::::: .:::::.  ::::::::.:.:..  :::::::::: ..:.:.: ::::::::::::::::::::::::::::::::::::::::::
+EPLYTEQDLAVNGREGFPNYSHPALTVTPDGDLLASYDGRPTGIAAPGPNSILQRRSTDGGRTWGEQQVVSAGQTTAPI--KGFSHPSYLVDRETGTIFNFHVYSQRQGWEGSR-----PGTDPADPNVLHANVATSTDG----GLTWSHRTITADITPDP--G-WRSRFAASGEGIQLRYGPHAGRLIQQYAIINA--AGAIQAVSVYSDDHGRTWRAGEA-V-GV-GMSHNKTVEL-S-DGRVLLNSADSARSGYRKVAVSTD---G-GHSYGPVTIDRDLPDPTNDASIIRAFPDAPAGSARAKVLLFSNAASQTSR--SQGTIRMSCDDGQTWPVS-KVFQPGSMSYSTLTALPDGTYGLLYEPGTGIRYANFNLAWLG
+
+#Total CPU time is  0.13 seconds

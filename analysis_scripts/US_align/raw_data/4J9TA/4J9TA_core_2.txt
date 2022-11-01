@@ -1,0 +1,24 @@
+
+ ********************************************************************
+ * US-align (Version 20220924)                                      *
+ * Universal Structure Alignment of Proteins and Nucleic Acids      *
+ * Reference: C Zhang, M Shine, AM Pyle, Y Zhang. (2022) Nat Methods*
+ * Please email comments and suggestions to yangzhanglab@umich.edu  *
+ ********************************************************************
+
+Name of Structure_1: ./AlphaFold/4J9TA/4J9TA_core_2/4J9TA_core_2_1f1a8_unrelaxed_rank_1_model_5.pdb:A (to be superimposed onto Structure_2)
+Name of Structure_2: ./pdbs/pdb4j9t.pdb:A
+Length of Structure_1: 355 residues
+Length of Structure_2: 355 residues
+
+Aligned length= 292, RMSD=   4.40, Seq_ID=n_identical/n_aligned= 0.158
+TM-score= 0.64916 (normalized by length of Structure_1: L=355, d0=6.85)
+TM-score= 0.64916 (normalized by length of Structure_2: L=355, d0=6.85)
+(You should use TM-score normalized by length of the reference structure)
+
+(":" denotes residue pairs of d < 5.0 Angstrom, "." denotes other aligned residues)
+MQIYESHFVYTCGENGHPRV-------------YCCCYSVSPDSNWV-----------------VC-YS-AFRKGNESYASSSAFCTW---------------CDNSS---KTIPALLILITPDTE-PPPRWCNDWV-AACNSKS--SYWWCFWYCCSKYPEDKSTA------CH-DPSNRDVAYIYICHCDDSSKTFTWKITTALTMTNPSVHWFYCCASAAFTCTHGP-HSSMYCISWSAVNKDGRVCFSWVYCNDHSKTYRWPQWISTSDAEAFTCVNSQSKIYFLSTNDNNSSHFYIAECNHSSTSWPPCKYNPNHWDCNM-PYTIVWANRDSPPDTEESSRLMTVTNTDTTNNRDPCVCMCNDCSKTIPKEVVVNPGDSTTCAWTICPDDDVPHVWNNSNSVYISVCDWAWFG
+                                 ..:...                         .  .  .                                .       ...:...:::..    ....:::::: :......  :::::::::::::.            .  ...:....::::::::::::::::....::.:.:::::: .:.:::::::.::. :.:::::::::::.:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::...::::::.: .:.:::: ::::::::..::::::::::::::::....:.::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+--------------------EPLYTEQDLAVNGREGFPN--------YSHPALTVTPDGDLLASY-DG-RP-----------------TGIAAPGPNSILQRRS----TDGGRTWGEQQVVSA---GQTTAPIKGFSHPSYLVDRETGTIFNFHVYSQRQG------WEGSRPG-TDPADPNVLHANVATSTDGGLTWSHRTITADITPDPGWRS-RFAASGEGIQLRYGPHAGRLIQQYAIINAAGAIQAVSVYSDDHGRTWRAGEAVGVGMSHNKTVELSDGRVLLNSADSARSGYRKVAVSTDGGHSYGPVTID-RDLPDPTNDASIIRAFPDAPAGSARAKVLLFSNAASQTSRSQGTIRMSCDDGQTWPVSKVFQPGSMSYSTLTALPDGTYGLLYEPGTGIRYANFNLAWLG
+
+#Total CPU time is  0.11 seconds

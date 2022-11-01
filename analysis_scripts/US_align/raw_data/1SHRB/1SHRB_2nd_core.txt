@@ -1,0 +1,22 @@
+
+ ********************************************************************
+ * US-align (Version 20220924)                                      *
+ * Universal Structure Alignment of Proteins and Nucleic Acids      *
+ * Reference: C Zhang, M Shine, AM Pyle, Y Zhang. (2022) Nat Methods*
+ * Please email comments and suggestions to yangzhanglab@umich.edu  *
+ ********************************************************************
+
+Name of Structure_1: ./AlphaFold/1SHRB/1SHRB_2nd_core/1SHRB_2nd_core_33554_unrelaxed_rank_1_model_4.pdb:1,A (to be superimposed onto Structure_2)
+Name of Structure_2: ./pdbs/pdb1shr.pdb:1,B
+Length of Structure_1: 146 residues
+Length of Structure_2: 146 residues
+
+Aligned length= 131, RMSD=   3.94, Seq_ID=n_identical/n_aligned= 0.153
+TM-score= 0.60686 (normalized by length of Structure_1: L=146, d0=4.50)
+TM-score= 0.60686 (normalized by length of Structure_2: L=146, d0=4.50)
+(You should use TM-score normalized by length of the reference structure)
+
+(":" denotes residue pairs of d < 5.0 Angstrom, "." denotes other aligned residues)
+LTITPEEREHMMELWGKMDPDTVA-AWCVAMYMCMYWSSYWMFKSCG-------DTPSWEEYLGNPEMIKQALKIYAMMMRAMSNFDNWRGVYKERMKKKIE--KLRVPDWYARRMAMMMLRMK-MSQHSSKATWEEFSCMMDVFQSICLSLLMYSI----
+:::::::::::::::::::::::: :::::::::: :::.              .::::::::::::::::::::::::::::::::::::::::::::::.  :::.:...:...:..:...: ..::::.:...::::::::.:.. ..          
+VHLTPEEKTAVNALWGKVNVDAVGGEALGRLLVVY-PWTQ-------RFFESFGDLSSPDAVMGNPKVKAHGKKVLGAFSDGLAHLDNLKGTFSQLSELHCDKLHVDPENFRLLGNVLVCVLARNFGKEFTPQMQAAYQKVVAGVANA-LA------HKYH
