@@ -29,9 +29,12 @@ Deep feed-forward neural network for predicting amino acid sequences from protei
 
 2. Predict sequence using `prediction.py`
 
-       prediction.py -p feature_directory examples/chain_list.txt pretrained_model/pretrained_parameters.pth
+       prediction.py -p feature_directory examples/chain_list.txt pretrained_model/pretrained_parameters.pth -n 2 -t 0.6 -c
  
     - prediction-only mode (-p) does not evaluate the model by comparing predictions with the original sequence 
+    - higher order prediction (-n) specifies the order of prediction to be used
+    - threshold (-t) implement a threshold value the primary prediction softmax probability. Only when the primary prediction probability is less than the softmax threshold, will the specified order be expressed.
+    - config (-c) feature_directory/config_*chain*.txt newline seperated values specifying positions. Target only certain positions for higher order predictions. Can be combined with a threshold.  
  
 ### Training your own model:
 
