@@ -72,7 +72,7 @@ class Predictor:
         # selected positions = index(from chimera) + 1
         if sel_pos_path.exists() and self.config:
             with open(sel_pos_path, 'r') as file:
-                sel_positions = [int(line.strip('\n')[0]) for line in file]
+                sel_positions = [int(line.strip('\n')) for line in file]
             print(sel_positions)
         dataloader = self.load_features(feature_paths)
         self.model.eval()
