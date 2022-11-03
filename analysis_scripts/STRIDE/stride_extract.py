@@ -9,8 +9,8 @@ def get_args():
                                                      "conservation determined by STRIDE for large batches of reports")
     arg_parser.add_argument('native_directory', type=str, help="directory of native chain reports in format 1XYZA")
     arg_parser.add_argument('predicted_directory', type=str, help="Parent directory of predicted chain results."
-                                                                  "File names in any format - same convention will be"
-                                                                  " used for results.")
+                                                                  "File names leading in chain name used for native"
+                                                                  " reports.")
     arg_parser.add_argument('chain', type=str, help="chain code in the format 1XYZA")
     args = arg_parser.parse_args()
     return args.native_directory, args.predicted_directory, args.chain
