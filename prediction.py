@@ -177,7 +177,7 @@ class Evaluator:
             file.write('Residues with 0 support: ' + unused)
 
     # generate a classification report and confusion matrices for the chain
-    def chain(self, chain, true_seq, true_residues, pred_residues, loss, chain_softmax):
+    def chain(self, chain, true_seq, true_residues, pred_residues, loss, chain_softmax, nth_prediction, threshold, spec):
         self.model_predictions.extend(pred_residues)
         self.model_true.extend(true_residues)
         self.model_softmax.extend(chain_softmax)
@@ -194,7 +194,7 @@ class Evaluator:
             chain_report = metrics.classification_report(true_residues, pred_residues, target_names=list(classes),
                                                          labels=labels, digits=3, zero_division=0)
         # write files
-        with open(self.out_dir / chain / f"report.txt", 'w') as file:
+        with open(self.out_dir / chain / f"report_{nth_prediction}_{int(threshold*100)}%{spec}.txt", 'w') as file:
             self.write_report(file, chain_report, avg_loss, unused_residues)
         with open(self.out_dir / chain / 'original_sequence.txt', 'w') as file:
             file.write(true_seq)
@@ -275,7 +275,7 @@ def main():
                     print(chain, '- Original sequence:\n' + true_seq + '\n')
 
                 if config and len(sel_positions)!=0:
-                    spec = 'config'
+                    spec = '_config'
                 else:
                     spec = ''
 
@@ -290,7 +290,7 @@ def main():
                         else:
                             file.write(f'{chain} predicted:\n{pred_seq}')
                 else:
-                    with open(chain_dir / f"top_{nth_prediction}_{int(threshold*100)}%_threshold_prediction_{spec}.txt", 'w')\
+                    with open(chain_dir / f"top_{nth_prediction}_{int(threshold*100)}%_threshold_prediction{spec}.txt", 'w')\
                             as file:
                         if config:
                             file.write(f'{chain} predicted:\n{pred_seq}\nSelected residue positions:\n{sel_positions}')
@@ -300,7 +300,7 @@ def main():
 
                 if not pred_only:
                     # generate a classification report and confusion matrices for the chain
-                    evaluate.chain(chain, true_seq, true_residues, pred_residues, loss, chain_softmax)
+                    evaluate.chain(chain, true_seq, true_residues, pred_residues, loss, chain_softmax, nth_prediction, threshold, spec)
 
                 i += 1
             except Exception as error:
